@@ -1,38 +1,56 @@
 <!DOCTYPE html>
 <html>
-    <head>        
+    <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
 
-        <title>CV - analyste-développeur informatique - Lucas Girard</title> 
+        <title>CV - analyste-développeur informatique - Lucas Girard</title>
 
         <meta name="author" content="Lucas GIRARD" />
         <meta name="description" content="web developper responsive CV" />
         <meta name="keywords"  content="" />
         <meta name="Resource-type" content="Document" />
 
-        <link type="text/css" rel='stylesheet' href='css/pure-min.css' />
-        <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />        
-        <link rel="stylesheet" href="css/fontello.css">        
+        <link type="text/css" rel='stylesheet' href='libCSS/purecss/pure-min.css' />  
+        <link type="text/css" rel='stylesheet' href='libJS/jquery-ui/jquery-ui.min.css' />  
+        <link type="text/css" rel='stylesheet' href="libJS/jquery-fullpage/css/jquery.fullPage.css" />
+        <link type="text/css" rel='stylesheet' href="libCSS/fontello/fontello.css">
         <!--if IE 7
-    link(rel='stylesheet', href='css/fontello-ie7.css')
+    link(rel='stylesheet', href='libCSS/fontello/fontello-ie7.css')
         -->
-        <link rel="stylesheet" type="text/css" href="http://api.picatcha.com/static/client/picatcha.css"/>
+        <link type="text/css" rel='stylesheet' href="http://api.picatcha.com/static/client/picatcha.css"/>
         <link type="text/css" rel='stylesheet' href='css/cv.css' />
 
-        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script type="text/javascript" src="js/jquery.eye.min.js"></script>
-        <script type="text/javascript" src="js/jquery.easings.min.js"></script>
-        <script type="text/javascript" src="js/jquery.slimscroll.min.js"></script>
-        <script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
-        <script type="text/javascript" src="js/lgStickedMenu.js"></script>
-        <script type="text/javascript" src="js/lgActiveMenu.js"></script>
-        <script type="text/javascript" src="http://api.picatcha.com/static/client/picatcha.js"></script>
-        <script type="text/javascript" src="js/cv.js"></script>       
+        <script type="text/javascript" src="libJS/jquery/jquery-1.11.1.min.js"></script>        
+        <script type="text/javascript" src="libJS/jquery-ui/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="libJS/jquery-eye/jquery.eye.1.1.0.min.js"></script>
+        <script type="text/javascript" src="libJS/jquery-slimscroll/jquery.slimscroll.1.3.3.min.js"></script>        
+        <script type="text/javascript" src="libJS/jquery-fullpage/jquery.fullPage.2.1.8.min.js"></script>
+        <script type="text/javascript" src="js/lgWonderfullParallax.1.js"></script>
+        <script type="text/javascript" src="js/lgWonderfulMenu.1.js"></script>     
+        <script type="text/javascript" src="http://api.picatcha.com/static/client/picatcha.js"></script>        
+        <script type="text/javascript" src="js/cv.js"></script>
+
     </head>
     <body>
+        <div id="dialog-form" title="Create new user">
+            <p class="validateTips">All form fields are required.</p>
+            <form>
+                <fieldset>
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" value="Jane Smith" class="text ui-widget-content ui-corner-all">
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="email" value="jane@smith.com" class="text ui-widget-content ui-corner-all">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" value="xxxxxxx" class="text ui-widget-content ui-corner-all">
+                    <!-- Allow form submission with keyboard without duplicating the dialog button -->
+                    <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+                </fieldset>
+            </form>
+        </div>
         <div id='content' class="pure-g-r">
-            <div id="sectionHome" class="section pure-u-1-1">
+            <section id="sectionHome" class="section pure-u-1-1">
+                
                 <div id="homeContent" class="pure-g-r">
 
                     <div class="pure-u-7-24 center">
@@ -61,7 +79,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="pure-u-1-1"><div class="pure-button pure-button-primary" onclick="popupOpen(popupCVHeader, popupCVContent)">Télécharger le C.V</div></div>
+                                <div class="pure-u-1-1"><div id="buttonDownloadCV" class="pure-button pure-button-primary">Télécharger le C.V</div></div>
                             </div>
                         </div>
                     </div>
@@ -87,19 +105,26 @@
                         </div>
                     </div>
                 </div>
-                <div id="header">
-                    <div id="navTouch" class="pure-hidden-desktop pure-hidden-tablet"><div href="#" onclick="menuLeftToggle()"></div></div>
-                    <div id="nav" class="pure-g-r">
-                        <div class="navItem pure-u-1-5"><a href="#home">Accueil</a></div>
-                        <div class="navItem pure-u-1-5"><a href="#skills">Compétences</a></div>
-                        <div class="navItem pure-u-1-5"><a href="#experiences">Expériences</a></div>
-                        <div class="navItem pure-u-1-5"><a href="#portfolios">Portfolios</a></div>
-                        <div class="navItem pure-u-1-5"><a href="#contact">Contact</a></div>                        
-                    </div>
-                </div>
-            </div>
 
-            <div id="sectionSkills" class="section pure-u-1-1">
+                <div class="header">
+                    <div class="navButtonMenu pure-hidden-desktop pure-hidden-tablet"></div>
+
+                    <ul id="menu" class="pure-g-r">
+                        <li class="navButtonMenuSpacer pure-hidden-desktop pure-hidden-tablet"></li>
+                        <li class="navItem pure-u-1-5">
+                            <a href="#home">Accueil</a>                            
+                        </li>
+                        <li class="navItem pure-u-1-5"><a href="#skills">Compétences</a></li>
+                        <li class="navItem pure-u-1-5"><a href="#experiences">Expériences</a></li>
+                        <li class="navItem pure-u-1-5"><a href="#portfolios">Portfolios</a></li>
+                        <li class="navItem pure-u-1-5"><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="parallax" data-velocity="-.7" style="background: url(images/home/fond2web.jpg) 50% 0 no-repeat fixed;margin: 0;height: 100%;position: absolute;width: 100%;top: 0;left: 0;z-index: -1"></div>
+            </section>
+
+            <section id="sectionSkills" class="section pure-u-1-1">
                 <h1>Compétences</h1>
                 <div class="pureContentVertical">
                     <div class="pure-g-r">
@@ -172,9 +197,11 @@
 
                     </div>
                 </div>
-            </div>
+                <div class="parallax" data-velocity="-.1" style="background: #777 50% 0 no-repeat fixed;margin: 0;height: 100%;position: absolute;width: 100%;top: 0;left: 0;z-index: -1"></div>
+                
+            </section>
 
-            <div id="sectionExperiences" class="section pure-u-1-1">
+            <section id="sectionExperiences" class="section pure-u-1-1">
                 <h1>Expériences</h1>
                 <div class="pureContentVertical">
                     <div id="workExperiences" class="pure-u-1-1">
@@ -231,15 +258,17 @@
                         </div>
                     </div>
                 </div>
-            </div>
+                
+                <div class="parallax" data-velocity="-.1" style="background: #777 50% 0 no-repeat fixed;margin: 0;height: 100%;position: absolute;width: 100%;top: 0;left: 0;z-index: -1"></div>
+            </section>
 
-            <div id="sectionPortfolios" class="section pure-u-1-1">
+            <section id="sectionPortfolios" class="section pure-u-1-1">
 
                 <h1>Portefolio</h1>
+<div class="parallax" data-velocity="-.1" style="background: #777 50% 0 no-repeat fixed;margin: 0;height: 100%;position: absolute;width: 100%;top: 0;left: 0;z-index: -1"></div>
+            </section>
 
-            </div>
-
-            <div id="sectionContact" class="section pure-u-1-1">
+            <section id="sectionContact" class="section pure-u-1-1">
                 <h1>Contact</h1>
                 <div class="pureContentVertical">
                     <div class="pure-g-r">
@@ -252,7 +281,7 @@
                                     <div><i class="icon-home"></i>11 Rue de la Croix Moreau, 75018 PARIS, FRANCE</div>
                                     <div><i class="icon-phone"></i>07 70 64 67 09</div>
                                     <div><i class="icon-email"></i>&#101;&#109;&#112;&#108;&#111;&#105;&#64;&#108;&#117;&#99;&#97;&#115;&#45;&#103;&#105;&#114;&#97;&#114;&#100;&#46;&#102;&#114;</div>
-                                    <div class="pure-button pure-button-primary" onclick="popupOpen(popupVCardHeader, popupVCardContent)"><i class="icon-download"></i>Télécharger la Vcard<i class="icon-vcard"></i></div>
+                                    <div id="buttonDownloadVcard" class="pure-button pure-button-primary"><i class="icon-download"></i>Télécharger la Vcard<i class="icon-vcard"></i></div>
                                 </div>
                             </div>
                         </div>
@@ -283,7 +312,7 @@
 
                                 <div class="pure-u-24-24 center">
                                     <div id="captcha" class="inline">
-                                        <div id="picatcha"></div>                                            
+                                        <div id="picatcha"></div>
                                     </div>
                                 </div>
                                 <div class="pure-u-24-24 center">
@@ -294,7 +323,8 @@
                         <div class="pure-u-2-24  pure-hidden-tablet pure-hidden-phone"></div>
                     </div>
                 </div>
-            </div>
+                <div class="parallax" data-velocity="-.1" style="background: #777 50% 0 no-repeat fixed;margin: 0;height: 100%;position: absolute;width: 100%;top: 0;left: 0;z-index: -1"></div>
+            </section>
         </div>
     </body>
 </html>
