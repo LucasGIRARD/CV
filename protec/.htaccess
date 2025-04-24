@@ -1,4 +1,0 @@
-PerlSetVar AuthFile req/moi.req
-AuthName "Acces Restreint"
-AuthType Basic
-require valid-user
