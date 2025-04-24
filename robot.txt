@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /googlemap/
+Disallow: /images/
+Disallow: /telechargement/
+Sitemap: <lien url="http://girard.lucas1.free.fr/sitemap.xml">http://girard.lucas1.free.fr/sitemap.xml</lien>
