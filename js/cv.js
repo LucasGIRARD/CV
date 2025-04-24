@@ -1,127 +1,90 @@
-var sendingMail = false;
-
-var leftMenuDeployed = false;
-var menuId = '#navLeft';
-var topBarId = '#header';
-
-var minWidthMenu = 150;
-
-clientHeight = document.documentElement.clientHeight;
-clientWidth = document.documentElement.clientWidth;
-
-var correctionTailleNavigateur = 0;
-var isFirefox = navigator.userAgent.indexOf('Firefox');
-var isWindows = navigator.userAgent.indexOf('Windows');
-var isIE = navigator.userAgent.indexOf('MSIE');
-if (isFirefox != -1 && isWindows == -1) {
-    correctionTailleNavigateur = 4;
-} else if (isIE != -1) {
-    correctionTailleNavigateur = 1;
-}
 /******************************************WINDOW READY******************************************/
-$(document).ready(function() {
+$(document).ready(function () {
+
+function validDialogCV() {
+    return true;
+}
+
+var dialogCV = $("#dialog-form").dialog({
+    autoOpen: false,
+    height: 300,
+    width: 350,
+    modal: true,
+    buttons: {
+        "Create an account": validDialogCV,
+        Cancel: function () {
+            dialogCV.dialog("close");
+        }
+    },
+    close: function () {
+                return true;
+    }
+});
+
+$(document).on("click", "#buttonDownloadCV", function () {
+    dialogCV.dialog("open");
+});
+
+    /*******************MENU*******************/
+
     $('#content').fullpage({
         anchors: ['home', 'skills', 'experiences', 'portfolios', 'contact'],
         menu: '#menu',
-        scrollOverflow: true
-    });
-    $('a[href*=#]:not([href=#menu-left])').click(function() {
-        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {            
-                menuLeftClose();
-            }        
+        resize: false,
+        scrollingSpeed: 1000,
+        scrollOverflow: true,
+        afterRender: function () {
+            $("#menu").wonderfullMenu({
+                sticked: true,
+                marginTopFixed: 0,
+                onePageJs: true,
+                idContainer: "content",
+                mobile: true,
+                responsive: true,
+                active: true,
+                parts: {
+                    0: 'sectionHome',
+                    1: 'sectionSkills',
+                    2: 'sectionExperiences',
+                    3: 'sectionPortfolios',
+                    4: 'sectionContact'
+                },
+                itemHoverClass: 'activeWM'
+            });
+            $('.parallax').wonderfullParallax({onePageJs: true, idContainer: "content", bgParallax: true});
+        }
     });
 
-    /*******************MENU*******************/
-    $('#header').stickedMenu({
-        sticked: true,
-        marginTopFixed: 0,
-        onePageJs: true,
-        idContent: '#content',
-        mobile: true,
-        responsive: true,
-        active: true,
-    });
-    ActiveMenu({
-        parts: {
-            0: 'sectionHome',
-            1: 'sectionSkills',
-            2: 'sectionExperiences',
-            3: 'sectionPortfolios',
-            4: 'sectionContact'
-        },
-        itemClass: {
-            0: 'navLeftItem',
-            1: 'navItem'
-        },
-        itemHover: 'active'
-    });
     /*******************FIN MENU*******************/
 
     Picatcha.API_SERVER = 'http://api.picatcha.com';
     Picatcha.PUBLIC_KEY = "PYCEEMUbTWRiToi4effg7O9FFONb9DS9ktRdg-0p";
     Picatcha.setCustomization({"format": "1", "color": "#2a1f19", "link": "0", "image_size": "50", "lang": "fr", "langOverride": "0", "noise_level": "10", "noise_type": "0"});
     Picatcha.create("picatcha");
+
 });
 /******************************************FIN WINDOW READY******************************************/
 
+/******************************************GOOGLE ANALITICS******************************************/
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-34537753-1']);
+_gaq.push(['_trackPageview']);
+var ga = document.createElement('script');
+ga.type = 'text/javascript';
+ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0];
+s.parentNode.insertBefore(ga, s);
+/******************************************FIN GOOGLE ANALITICS******************************************/
 
 
-/******************************************GOOGLE ANALITICS******************************************
- var _gaq = _gaq || [];
- _gaq.push(['_setAccount', 'UA-34537753-1']);
- _gaq.push(['_trackPageview']);
- var ga = document.createElement('script');
- ga.type = 'text/javascript';
- ga.async = true;
- ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
- var s = document.getElementsByTagName('script')[0];
- s.parentNode.insertBefore(ga, s);
- ******************************************FIN GOOGLE ANALITICS******************************************/
 
 
-function menuLeftToggle() {
-    if (leftMenuDeployed) {
-        menuLeftClose();
-    } else {
-        menuLeftOpen();
-    }
-}
 
-function menuLeftOpen() {
-    $(menuId).show();
-    menuLeftSetPosition();
-    leftMenuDeployed = true;
-}
 
-function menuLeftSetPosition() {
-    $(menuId).height(clientHeight);
-    menuLeftWidth = clientWidth / 4;
-    if (menuLeftWidth < minWidthMenu) {
-       menuLeftWidth = minWidthMenu;
-    }
-    $(topBarId).animate({
-        left: menuLeftWidth + 3
-    }, 700);
-    $(menuId).animate({
-        width: menuLeftWidth
-    }, 700);
-}
 
-function menuLeftClose() {
-    $(topBarId).animate({
-        left: 0
-    }, 700);
-    $(menuId).animate({
-        width: 0
-    },
-    {
-        duration: 700,
-        complete: function() {
-            $(menuId).hide()
-        }
-    });
-    leftMenuDeployed = false;
-}
+/*
+var sendingMail = false;
 
 function submitMail()
 {
@@ -160,12 +123,12 @@ function submitMail()
         if (missingFieldBool == false) {
             picatcha_data = {'s0': [], 'token': [], 'stages': 0};
             picatcha_data['token'] = $('.picatcha_token').val();
-            $('#picatcha_table').find($(':checked')).each(function(index) {
+            $('#picatcha_table').find($(':checked')).each(function (index) {
                 picatcha_data['s0'].push(this.value)
             });
 
             $.ajax({
-                url: 'phpAjax/emailSend.php',
+                url: 'ajaxPHP/emailSend.php',
                 type: 'POST',
                 data: {
                     'name': name,
@@ -178,7 +141,7 @@ function submitMail()
                     'picatcha[stages]': picatcha_data['stages'],
                     'picatcha[r][s0][]': picatcha_data['s0']
                 },
-                success: function(code_html, statut) {
+                success: function (code_html, statut) {
                     response = eval('(' + code_html + ')');
                     ;
                     if (response.answer == 'ok') {
@@ -203,7 +166,7 @@ function submitMail()
                     }
 
                 },
-                error: function(resultat, statut, erreur) {
+                error: function (resultat, statut, erreur) {
 
                 }
             });
@@ -220,3 +183,4 @@ function submitMail()
         //popupOpen(popupAlert, 'E-mail en cours d\'envoi ou déjà envoyé.' + popupAlertContentButton);
     }
 }
+*/

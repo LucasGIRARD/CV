@@ -1,7 +1,7 @@
 <?php
 
 if (!empty($_POST['name']) && !empty($_POST['email']) && !empty($_POST['object']) && !empty($_POST['message'])) {
-    require_once('../phpLib/picatchalib.php');
+    require_once('../libPHP/picatchalib.php');
 
     $response = picatcha_check_answer("MGPsiFlwKMWIRCKLgvWWy-DU7pBhX7nmz6Uq_M_g", $_SERVER['REMOTE_ADDR'], $_SERVER['HTTP_USER_AGENT'], $_POST['picatcha']['token'], $_POST['picatcha']['r']);
 
