@@ -94,27 +94,82 @@ h1 {
     text-indent: 15px;
 }
 /* END GENERAL THEME */
-/*  STICKEDMENU */
-.sticked {
-    z-index: 1000;
+/*  lgWonderfullMenu */
+
+.wonderfullSticked, .wonderfullMobile {
+    position: fixed;
+}
+
+.wonderfullMobile {
+    max-width: 300px;
+    height: 100%;
+    display: inline-block; 
+    left: -300px;
+}
+
+.wonderfullMobile div {
+    display: inline-block;                
+}
+
+.wonderfullMobile div a {
+    text-align: left;
+    border-right: none;
+    border-bottom: 1px solid #4A4A4A;
+}
+
+.navButtonMenuSpacer {
+    border-bottom: 1px solid #4A4A4A;
+    height: 40px;
+    width: 100%;
+}
+
+.navButtonMenu {
+    height: 40px;
+    width: 40px;
     position: fixed;
     top: 0px;
-    left: 0px;    
+    background: center center no-repeat #333333;
+    background-image: url( data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADhJREFUeNpi/P//PwOtARMDHQBdLGFBYtMq3BiHT3DRPU4YR4NrNAmPJuHRJDyahEeT8Ii3BCDAAF0WBj5Er5idAAAAAElFTkSuQmCC );
+    cursor: pointer;
+    z-index: 1001;
 }
 
-/* END STICKEDMENU */
-/* MENU */
-#header {    
+/* END lgWonderfullMenu */
+
+#menu {
+    border: none;
+    z-index: 100;
     width: 100%;
-    background-color:#333333;    
 }
 
-#nav div, #navLeft div {
+#menu li {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+#menu li a {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+}
+
+#menu li ul {
+    width: 60%;
+}
+
+/* MENU */
+.nav {    
+    width: 100%;
+    background-color:#333333; 
+    z-index: 1000;
+}           
+
+.nav div {                
     font-size: 16px;
     text-align: center;
 }
 
-#nav div a, #navLeft div a {
+.nav div a {
     text-decoration:none;
     color:#929291;
     margin: 0px;
@@ -123,36 +178,12 @@ h1 {
     display: block;
 }
 
-#nav div a {
+.nav div a {
     border-right: 1px solid #4A4A4A;
 }
 
-#navLeft div a {
-    text-indent: 15px;
-    border-bottom: 1px solid #4A4A4A;
-}
-
-#nav div a:hover, #nav div.active a, #navLeft div a:hover, #navLeft div.active a {
+.nav div a:hover, .nav div.activeWM a {
     color: #FFFFFF;
-}
-
-#navLeft {    
-    width: 0px;
-    background-color: #333334;    
-    z-index: 2000;
-    border-right: 3px solid #1B1B1B;
-}
-
-#navTouch div
-{
-    background: center center no-repeat transparent;
-    background-image: url( data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADhJREFUeNpi/P//PwOtARMDHQBdLGFBYtMq3BiHT3DRPU4YR4NrNAmPJuHRJDyahEeT8Ii3BCDAAF0WBj5Er5idAAAAAElFTkSuQmCC );
-    cursor: pointer;
-    display: block;
-    width: 40px;
-    height: 40px;
-    top: 0;
-    left: 10px;
 }
 /* END MENU */
 /* CONTENT */
@@ -168,7 +199,7 @@ h1 {
 }
 
 #sectionHome {
-    background: url("../images/home/fond2web.jpg") no-repeat center center fixed;
+    //background: url("../images/home/fond2web.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -196,17 +227,9 @@ h1 {
     text-align: center;
 }
 
-#sectionExperiences, #sectionContact {
-    background-color: #FFFFFF;
-}
-
 #sectionExperiences h1, #sectionContact h1 {
     background-color: #2D251B;
     color: #FFFFFF;
-}
-
-#sectionSkills, #sectionPortfolios {
-    background-color: #2D251B;
 }
 
 #sectionSkills h1, #sectionPortfolios h1 {
