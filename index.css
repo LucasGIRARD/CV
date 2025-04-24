@@ -1,0 +1,164 @@
+#error
+{
+font-style:italic;
+font-size: 12px;
+background-color:gray;
+}
+
+#image
+{
+width:210px;
+}
+
+#remonter
+{
+text-align:right;
+padding-right:15px;
+}
+
+#bas
+{
+	border-top:1px solid;
+	background-color:white;
+	width: 100%;
+	position:fixed;
+	bottom: 0px;
+	padding: 0px;
+	margin: 0px;
+}
+
+#bas1
+{
+	width:43%;
+}
+
+#comm
+{
+vertical-align:top;
+}
+
+#cv
+{
+text-align:right;
+}
+
+#body
+{
+margin:auto;
+width:700px;
+padding:10px 0px;
+}
+
+.menu
+{
+text-align:center;
+}
+
+form 
+{
+text-align:center;
+}
+
+form table
+{
+margin:auto;
+width: 700px;
+}
+
+form table td
+{
+vertical-align:top;
+text-align:left;
+}
+
+#boutton
+{
+text-align:right;
+padding-right:125px;
+}
+
+
+.section
+{
+vertical-align:top;
+}
+
+
+
+.tab1px
+{
+width:700px;
+margin-left: auto;
+margin-right: auto;
+border-collapse:collapse;
+}
+.tab1px th
+{
+border: 1px solid;
+}
+.tab1px td
+{
+
+padding:10px;
+border: 1px solid;
+}
+
+
+.tab1pxb
+{
+width:700px;
+margin-left: auto;
+margin-right: auto;
+border-collapse:collapse;
+}
+.tab1pxb th
+{
+border: 1px solid;
+}
+.tab1pxb td
+{
+padding:10px;
+border: 1px solid;
+}
+
+.tab0px
+{
+width:700px;
+margin-left: auto;
+margin-right: auto;
+border-collapse:collapse;
+}
+.tab0px tr
+{
+border: 1px solid;
+}
+.tab0px td
+{
+padding:10px;
+}
+
+.photod
+{
+padding-top:15px;
+vertical-align:top;
+}
+
+img
+{
+border:0px;
+}
+
+.lien
+{
+text-align:right;
+padding-right:15px;
+}
+
+.dltable
+{
+width:700px;
+margin-left: auto;
+margin-right: auto;
+border-collapse:collapse;
+text-align:center;
+}
