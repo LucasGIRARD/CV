@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link type="text/css" rel='stylesheet' href='css/pure-min.css' />
+        <style>
+
+            body {
+                margin: 0px;
+            }
+
+            .pureContainer {
+                padding: 0.5em 0.5em;                
+            }            
+
+            #Kroussel-slides, .Kroussel-slide, #Kroussel-interface, #Kroussel-interface-grid, #Kroussel-arrowleft-container, #Kroussel-arrowright-container, #Kroussel-navigator-container, #Kroussel-navigator-container-mobile {
+                height: 100%;
+            }
+
+            #Kroussel-arrowleft, #Kroussel-arrowright, .Kroussel-content, #Kroussel-navigator {
+                position:relative;                
+            }  
+
+            .Kroussel-backgroundImage {
+                position: absolute;
+                z-index: -2;
+            }
+
+            #Kroussel-slides {
+                position: absolute;
+                z-index: -1;
+                overflow: hidden;
+            }
+
+            #Kroussel-slides-overflow {
+                width: 10000px;
+                position: relative;
+            }
+
+            .Kroussel-slide {
+                display: inline-block;
+                vertical-align: top;
+            }
+
+
+            .Kroussel-title {
+                line-height: 1em;
+                font-size: 4em;
+                margin-bottom: 0.5em;
+                color: #FFFFFF;
+            }
+
+            .Kroussel-description {
+                line-height: 0.9em;
+                font-size: 2em;
+                color: #FFFFFF;
+            }
+
+            #Kroussel-navigator {
+                text-align: center;
+            }
+            
+            
+            
+            #Kroussel-arrowtop-container div, #Kroussel-arrowbottom-container div {
+                display: inline-block;
+            }
+           
+            #Kroussel-arrowtop-container, #Kroussel-arrowbottom-container {                
+                text-align: center;
+            }        
+            
+        </style>
+        
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/flowtype.js"></script>
+        <script type="text/javascript" src="js/test2_1.js"></script>
+    </head>
+    <body>
+        <div>aaa</div>
+        <div id="Kroussel">
+            <div id="Kroussel-slides">
+                <div id="Kroussel-slides-overflow">
+
+                    <div id="Kroussel-slide-1" class="Kroussel-slide">
+                        <div class="Kroussel-backgroundImage pure-g-r"><img src="images/jssor/red.jpg" class="pure-u-1" /></div>
+                        <div class="pure-g-r Kroussel-content">
+                            <div class="pure-u-2-24"></div>
+                            <div class="pure-g-r pure-u-20-24">
+                                <div class="pure-u-1-2 Kroussel-image-container"><div class="Kroussel-image"><div class="pureContainer"><img src="images/portefolio/cress.jpg" /></div></div></div>
+                                <div class="pure-u-1-2">
+                                    <div class="Kroussel-text">
+                                        <div class="pureContainer">
+                                            <div class="Kroussel-title">CRESS BN</div>
+                                            <div class="Kroussel-description">
+                                                <p>Type de projet : Création d'un site internet.</p>
+                                                <p>Technologies utilisés : XHTML, CSS 3, JavaScript.</p>
+                                                <p>Commentaire : la demande principale était le remplacement urgent du site précèdent car piraté.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pure-u-2-24"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div id="Kroussel-interface">
+                <div id="Kroussel-interface-grid pure-hidden-phone" class="pure-g-r">
+                    <div class="pure-u-2-24" id="Kroussel-arrowleft-container" ><div id="Kroussel-arrowleft" class="pureContainer pure-hidden-phone"><img onclick="KrousselPrevious()" src="images/Kroussel/a04/a04-L2.png" /></div></div>
+                    <div class="pure-u-20-24 pure-g-r" id="Kroussel-navigator-container"></div>
+                    <div class="pure-u-2-24" id="Kroussel-arrowright-container"><div id="Kroussel-arrowright" class="pureContainer pure-hidden-phone"><img onclick="KrousselNext()" src="images/Kroussel/a04/a04-R2.png" /></div></div>
+                </div>
+                
+                
+                
+                <div id="Kroussel-interface-grid-phone pure-hidden-desktop pure-hidden-tablet" class="pure-g-r">
+                    <div class="pure-u-2-24 pure-hidden-desktop pure-hidden-tablet" id="Kroussel-arrowtop-container" >
+                        <div id="Kroussel-arrowleft" class="pureContainer pure-hidden-desktop pure-hidden-tablet">
+                            <img onclick="KrousselPrevious()" class="pure-hidden-desktop pure-hidden-tablet" src="images/Kroussel/a04/a04-L2.png" />
+                        </div>
+                        <div id="Kroussel-arrowright" class="pureContainer pure-hidden-desktop pure-hidden-tablet">
+                            <img onclick="KrousselNext()" class="pure-hidden-desktop pure-hidden-tablet" src="images/Kroussel/a04/a04-R2.png" />
+                        </div>
+                    </div>
+                    <div class="pure-u-20-24 pure-g-r pure-hidden-desktop pure-hidden-tablet" id="Kroussel-navigator-container-mobile"></div>
+                    <div class="pure-u-2-24 pure-hidden-desktop pure-hidden-tablet" id="Kroussel-arrowbottom-container">
+                        <div id="Kroussel-arrowleft" class="pureContainer pure-hidden-desktop pure-hidden-tablet">
+                            <img onclick="KrousselPrevious()" class="pure-hidden-desktop pure-hidden-tablet" src="images/Kroussel/a04/a04-L2.png" />
+                        </div>
+                        <div id="Kroussel-arrowright" class="pureContainer pure-hidden-desktop pure-hidden-tablet">
+                            <img onclick="KrousselNext()" class="pure-hidden-desktop pure-hidden-tablet" src="images/Kroussel/a04/a04-R2.png" />
+                        </div>
+                    </div>
+                </div>
+                <div id="Kroussel-loading"><div></div></div>
+            </div>
+
+        </div>
+        <div>aaa</div>
+    </body>
+</html>
