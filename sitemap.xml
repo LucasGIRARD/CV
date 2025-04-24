@@ -1,186 +1,213 @@
-<?xml version='1.0' encoding='UTF-8' ?>
-<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
-         xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>http://girard.lucas1.free.fr</loc>
-    <lastmod>2009-08-04</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>http://girard.lucas1.free.fr/index.php?page=accueil</loc>
-    <lastmod>2009-08-04</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>http://girard.lucas1.free.fr/index.php?page=cv</loc>
-    <lastmod>2009-08-04</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>http://girard.lucas1.free.fr/index.php?page=etat_civile</loc>
-    <lastmod>2009-08-04</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>http://girard.lucas1.free.fr/index.php?page=etat_civiled</loc>
-    <lastmod>2009-08-04</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>http://girard.lucas1.free.fr/index.php?page=formations</loc>
-    <lastmod>2009-08-04</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>http://girard.lucas1.free.fr/index.php?page=competences_techniques</loc>
-    <lastmod>2009-08-04</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>http://girard.lucas1.free.fr/index.php?page=competences_techniquesd</loc>
-    <lastmod>2009-08-04</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>http://girard.lucas1.free.fr/index.php?page=experiences_professionnelles</loc>
-    <lastmod>2009-08-04</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>http://girard.lucas1.free.fr/index.php?page=centres_interets</loc>
-    <lastmod>2009-08-04</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>http://girard.lucas1.free.fr/index.php?page=recommandation_impression</loc>
-    <lastmod>2009-08-04</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>http://girard.lucas1.free.fr/cv_imprimable.html</loc>
-    <lastmod>2009-08-04</lastmod>
-    <priority>1.0</priority>
-  </url> 
-  <url>
-    <loc> http://girard.lucas1.free.fr/index.php?page=portefolio</loc>
-    <lastmod>2009-08-04</lastmod>
-    <priority>1.0</priority>
-  </url>
-      <url>
-    <loc> http://girard.lucas1.free.fr/index.php?page=telechargement</loc>
-    <lastmod>2009-08-04</lastmod>
-    <priority>1.0</priority>
-  </url>
-    <url>
-    <loc>http://girard.lucas1.free.fr/index.php?page=telechargement#cv</loc>
-    <lastmod>2009-08-04</lastmod>
-    <priority>1.0</priority>
-  </url>
-    <url>
-    <loc>http://girard.lucas1.free.fr/index.php?page=telechargement#vcard</loc>
-    <lastmod>2009-08-04</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>http://girard.lucas1.free.fr/index.php?page=telechargement#logiciel</loc>
-    <lastmod>2009-08-04</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>http://girard.lucas1.free.fr/index.php?page=contact</loc>
-    <lastmod>2009-08-04</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>http://girard.lucas1.free.fr/index.php?page=liens</loc>
-    <lastmod>2009-08-04</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>http://girard.lucas1.free.fr/index.php?page=liens&amp;categorie=logiciels_libre</loc>
-    <lastmod>2009-08-04</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>http://girard.lucas1.free.fr/index.php?page=liens&amp;categorie=autres</loc>
-    <lastmod>2009-08-04</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>http://girard.lucas1.free.fr/index.php?page=liens&amp;categorie=blogs</loc>
-    <lastmod>2009-08-04</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>http://girard.lucas1.free.fr/index.php?page=liens&amp;categorie=standard</loc>
-    <lastmod>2009-08-04</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>http://girard.lucas1.free.fr/index.php?page=liens&amp;categorie=general</loc>
-    <lastmod>2009-08-04</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>http://girard.lucas1.free.fr/index.php?page=liens&amp;categorie=html</loc>
-    <lastmod>2009-08-04</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>http://girard.lucas1.free.fr/index.php?page=liens&amp;categorie=php</loc>
-    <lastmod>2009-08-04</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>http://girard.lucas1.free.fr/index.php?page=liens&amp;categorie=javascript</loc>
-    <lastmod>2009-08-04</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>http://girard.lucas1.free.fr/index.php?page=liens&amp;categorie=linux</loc>
-    <lastmod>2009-08-04</lastmod>
-    <priority>1.0</priority>
-  </url>
-    <url>
-    <loc>http://girard.lucas1.free.fr/index.php?page=liens&amp;categorie=graphisme</loc>
-    <lastmod>2009-08-04</lastmod>
-    <priority>1.0</priority>
-  </url>
-    <url>
-    <loc>http://girard.lucas1.free.fr/index.php?page=liens&amp;categorie=all</loc>
-    <lastmod>2009-08-04</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>http://girard.lucas1.free.fr/telechargement/CV.docx</loc>
-    <lastmod>2009-08-04</lastmod>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
-    <priority>0.1</priority>
-  </url>
-  <url>
-    <loc>http://girard.lucas1.free.fr/telechargement/CV.doc</loc>
-    <lastmod>2009-08-04</lastmod>
-    <priority>0.1</priority>
-  </url>
-  <url>
-    <loc>http://girard.lucas1.free.fr/telechargement/CV.pdf</loc>
-    <lastmod>2009-08-04</lastmod>
-    <priority>0.1</priority>
-  </url>
-  <url>
-    <loc>http://girard.lucas1.free.fr/telechargement/CV.odt</loc>
-    <lastmod>2009-08-04</lastmod>
-    <priority>0.1</priority>
-  </url>
-  <url>
-    <loc>http://girard.lucas1.free.fr/telechargement/Lucas_Girard.vcf.zip</loc>
-    <lastmod>2009-08-04</lastmod>
-    <priority>0.1</priority>
-  </url>
-  <url>
-    <loc>http://girard.lucas1.free.fr/telechargement/Lucas_Girard.ldif.zip</loc>
-    <lastmod>2009-08-04</lastmod>
-    <priority>0.1</priority>
-  </url>
+<url>
+  <loc>http://www.lucas-girard.fr/</loc>
+  <changefreq>monthly</changefreq>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>http://www.lucas-girard.fr/index.php</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.lucas-girard.fr/index.php?module=cv</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.lucas-girard.fr/index.php?module=portefolio</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.lucas-girard.fr/index.php?module=download</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.lucas-girard.fr/index.php?module=contact</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.lucas-girard.fr/index.php?module=links</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.lucas-girard.fr/index.php?module=cv&amp;page=fullCivilState</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.lucas-girard.fr/index.php?module=cv&amp;page=workExperience</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.lucas-girard.fr/index.php?module=cv&amp;page=education</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.lucas-girard.fr/index.php?module=cv&amp;page=skill</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.lucas-girard.fr/index.php?module=cv&amp;page=activitie</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.lucas-girard.fr/test/VOL/</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.lucas-girard.fr/test/imageCrop/</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.lucas-girard.fr/test/dispo/</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.lucas-girard.fr/file/3.docx</loc>
+  <lastmod>2012-09-04T21:59:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.lucas-girard.fr/file/4.doc</loc>
+  <lastmod>2012-09-04T21:58:44+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.lucas-girard.fr/file/5.pdf</loc>
+  <lastmod>2012-09-04T21:57:57+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.lucas-girard.fr/file/6.odt</loc>
+  <lastmod>2012-09-04T21:57:54+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.lucas-girard.fr/index.php?module=cv&amp;page=civilState</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.lucas-girard.fr/test/VOL/index.php?langue=fr</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.lucas-girard.fr/test/VOL/index.php?langue=en</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.lucas-girard.fr/test/VOL/index.php?page=accueil</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.lucas-girard.fr/test/VOL/index.php?page=verre-lentille</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.lucas-girard.fr/test/VOL/index.php?page=lunettes</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.lucas-girard.fr/test/VOL/index.php?page=localisation</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.lucas-girard.fr/test/VOL/index.php?page=contact</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.lucas-girard.fr/test/VOL/index.php?page=mentions</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.lucas-girard.fr/test/VOL/index.php?page=accueil&amp;langue=fr</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://www.lucas-girard.fr/test/VOL/index.php?page=verre-lentille&amp;langue=fr</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://www.lucas-girard.fr/test/VOL/index.php?page=lunettes&amp;langue=fr</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://www.lucas-girard.fr/test/VOL/index.php?page=localisation&amp;langue=fr</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://www.lucas-girard.fr/test/VOL/index.php?page=contact&amp;langue=fr</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://www.lucas-girard.fr/test/VOL/index.php?page=mentions&amp;langue=fr</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://www.lucas-girard.fr/test/VOL/index.php?page=accueil&amp;langue=en</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://www.lucas-girard.fr/test/VOL/index.php?page=verre-lentille&amp;langue=en</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://www.lucas-girard.fr/test/VOL/index.php?page=lunettes&amp;langue=en</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://www.lucas-girard.fr/test/VOL/index.php?page=localisation&amp;langue=en</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://www.lucas-girard.fr/test/VOL/index.php?page=contact&amp;langue=en</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://www.lucas-girard.fr/test/VOL/index.php?page=mentions&amp;langue=en</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.41</priority>
+</url>
 </urlset>
