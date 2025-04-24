@@ -7,6 +7,8 @@ var menuSize = 0;
 var itemClass = [];
 var itemHover;
 
+var onePageJs = true;
+
 function ActiveMenu(options) {
 
     for (var o in options.parts) {
@@ -28,8 +30,12 @@ function ActiveMenu(options) {
         contentView = $('#' + options.parts[i] + '').height() * .4;
         testView[i] = contentTop[i] - contentView;
     }
+    if (onePageJs) {
+        varscroll = Math.abs(parseInt($('#content').offset().top));
+    } else {
+        varscroll = parseInt($(document).scrollTop());
+    }
 
-    varscroll = parseInt($(document).scrollTop());
     if (varscroll < 50) {
         for (var i = 0; i < itemClass.length; i++) {
             $('.' + itemClass[i] + ':eq(0)').addClass(itemHover);
@@ -46,39 +52,80 @@ function ActiveMenu(options) {
         }
 
     }
-};
+}
+;
+$(document).ready(function() {
+    if (onePageJs) {
+        $('#content').eye({
+            'top': function(oldVal, newVal) {
+                varscroll = Math.abs(parseInt(newVal));
 
-$(document).on('scroll', function() {
-    varscroll = parseInt($(document).scrollTop());
-
-    var st = $(this).scrollTop();
-    if (st > lastScrollTop) {
-        scrollDir = 'down';
-    } else {
-        scrollDir = 'up';
-    }
-    lastScrollTop = st;
-
-    if (scrollDir == 'up' && varscroll < 50) {
-
-        for (var i = 0; i < itemClass.length; i++) {
-            $('.' + itemClass[i]).removeClass(itemHover);
-            $('.' + itemClass[i] + ':eq(0)').addClass(itemHover);
-        }
-    } else {
-        for (var i = 0; i < menuSize; i++) {
-            if (scrollDir == 'down' && varscroll > contentTop[i] - 50 && varscroll < contentTop[i] + 0) {
-                for (var y = 0; y < itemClass.length; y++) {
-                    $('.' + itemClass[y]).removeClass(itemHover);
-                    $('.' + itemClass[y] + ':eq(' + i + ')').addClass(itemHover);
+                var st = $(this).scrollTop();
+                if (st > lastScrollTop) {
+                    scrollDir = 'down';
+                } else {
+                    scrollDir = 'up';
                 }
+                lastScrollTop = st;
 
-            } else if (scrollDir == 'up' && varscroll > testView[i]) {
-                for (var y = 0; y < itemClass.length; y++) {
-                    $('.' + itemClass[y]).removeClass(itemHover);
-                    $('.' + itemClass[y] + ':eq(' + i + ')').addClass(itemHover);
+                if (scrollDir == 'up' && varscroll < 50) {
+
+                    for (var i = 0; i < itemClass.length; i++) {
+                        $('.' + itemClass[i]).removeClass(itemHover);
+                        $('.' + itemClass[i] + ':eq(0)').addClass(itemHover);
+                    }
+                } else {
+                    for (var i = 0; i < menuSize; i++) {
+                        if (scrollDir == 'down' && varscroll > contentTop[i] - 50 && varscroll < contentTop[i] + 0) {
+                            for (var y = 0; y < itemClass.length; y++) {
+                                $('.' + itemClass[y]).removeClass(itemHover);
+                                $('.' + itemClass[y] + ':eq(' + i + ')').addClass(itemHover);
+                            }
+
+                        } else if (scrollDir == 'up' && varscroll > testView[i]) {
+                            for (var y = 0; y < itemClass.length; y++) {
+                                $('.' + itemClass[y]).removeClass(itemHover);
+                                $('.' + itemClass[y] + ':eq(' + i + ')').addClass(itemHover);
+                            }
+                        }
+                    }
                 }
             }
-        }
+        }, 100);
+    } else {
+        $(document).on('scroll', function() {
+            varscroll = parseInt($(document).scrollTop());
+
+            var st = $(this).scrollTop();
+            if (st > lastScrollTop) {
+                scrollDir = 'down';
+            } else {
+                scrollDir = 'up';
+            }
+            lastScrollTop = st;
+
+            if (scrollDir == 'up' && varscroll < 50) {
+
+                for (var i = 0; i < itemClass.length; i++) {
+                    $('.' + itemClass[i]).removeClass(itemHover);
+                    $('.' + itemClass[i] + ':eq(0)').addClass(itemHover);
+                }
+            } else {
+                for (var i = 0; i < menuSize; i++) {
+                    if (scrollDir == 'down' && varscroll > contentTop[i] - 50 && varscroll < contentTop[i] + 0) {
+                        for (var y = 0; y < itemClass.length; y++) {
+                            $('.' + itemClass[y]).removeClass(itemHover);
+                            $('.' + itemClass[y] + ':eq(' + i + ')').addClass(itemHover);
+                        }
+
+                    } else if (scrollDir == 'up' && varscroll > testView[i]) {
+                        for (var y = 0; y < itemClass.length; y++) {
+                            $('.' + itemClass[y]).removeClass(itemHover);
+                            $('.' + itemClass[y] + ':eq(' + i + ')').addClass(itemHover);
+                        }
+                    }
+                }
+            }
+        });
     }
 });
