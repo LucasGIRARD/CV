@@ -9,13 +9,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@deploy
+        uses: actions/checkout@v4.2.2
       - name: Install dependencies
         run: npm i
       - name: Build dependencies
         run: npm run build
       - name: Archive production artifact
-        uses: actions/upload-artifact@main
+        uses: actions/upload-artifact@v4.6.2
         with:
           name: www
           path: www
@@ -25,14 +25,14 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
       - name: Checkout repository
-        uses: actions/checkout@deploy
+        uses: actions/checkout@v4.2.2
       - name: Download artifact
-        uses: actions/download-artifact@deploy
+        uses: actions/download-artifact@4.3.0
         with: 
           name: www
           path: www
       - name: Sync files to hosting
-        uses: SamKirkland/FTP-Deploy-Action@4.0.0
+        uses: SamKirkland/FTP-Deploy-Action@4.3.5
         with: 
           server: ${{ secrets.ftp_server }}
           username: ${{ secrets.ftp_user }}
