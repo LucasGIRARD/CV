@@ -29,12 +29,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4.2.2
       - name: Download artifact
-        uses: actions/download-artifact@4.3.0
+        uses: actions/download-artifact@v4.3.0
         with: 
           name: www
           path: www
       - name: Sync files to hosting
-        uses: SamKirkland/FTP-Deploy-Action@4.3.5
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with: 
           server: ${{ secrets.ftp_server }}
           username: ${{ secrets.ftp_user }}
