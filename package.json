@@ -8,21 +8,25 @@
   "scripts": {
     "premodule": "rm -rf src/vendors/node_modules/*; mkdir -p src/vendors/node_modules",
     "module": "./module.sh",
+    "livereload": "livereload \"src\"",
+    "sass": "sass --no-source-map src/css/style.scss src/css/style.css",
+    "watchy:sass": "watchy -w 'src/css/*.scss' -- bash -c 'npm run sass'",
     "premoveBuild": "rm -rf www;mkdir -p www",
     "moveBuild": "shopt -s dotglob;for d in src/*; do cp -R \"$d\" \"www/\"; done;",
-    "prefixCss": "postcss src/css/*.css -r --use autoprefixer",
+    "prefixCss": "postcss www/css/*.css -r --use autoprefixer",
+    "ugli:HJCI": "caaf www",
     "opti:critical": "critical www/index.html --base www --inline > index.html",
-    "ugli:all": "caaf www",
-    "sass": "sass --no-source-map src/css/style.scss src/css/style.css",
-    "postugli:all": "shopt -s dotglob;for d in src/fonts/*; do cp -R \"$d\" \"www/fonts/\"; done;",
     "htaccess": "shopt -s dotglob;mv www/.htaccess2 www/.htaccess",
-    "watch": "livereload \"src\"",
-    "build": "npm run moveBuild && npm run htaccess && npm run ugli:all",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "debug:powershell:cmd1": "Get-Process -Id (Get-NetTCPConnection -LocalPort 35729).OwningProcess",
+    "debug:powershell:cmd2": "Stop-Process -Id ***",
+    "dev": "concurrently --kill-others \"npm run watchy:sass\" \"npm run livereload\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run moveBuild && npm run prefixCss && npm run ugli:HJCI && npm run opti:critical && npm run htaccess"
   },
   "devDependencies": {
     "autoprefixer": "^9.1.5",
     "caaf": "^1.0.1",
+    "concurrently": "^9.1.2",
     "critical": "^1.2.2",
     "livereload": "^0.7.0",
     "postcss-cli": "^6.0.0",
@@ -33,6 +37,7 @@
     "gumshoejs": "^5.1.2",
     "mixitup": "^3.3.2",
     "purecss": "github:pure-css/pure",
-    "sweetalert2": "^11.21.0"
+    "sweetalert2": "^11.21.0",
+    "tarteaucitronjs": "^1.21.0"
   }
 }
