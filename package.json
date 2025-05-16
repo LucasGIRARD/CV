@@ -22,7 +22,7 @@
     "debug:powershell:cmd2": "Stop-Process -Id ***",
     "dev": "concurrently --kill-others \"npm run watchy:sass\" \"npm run livereload\"",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm run moveBuild && npm run prefixCss && npm run ugli:HJCI && npm run opti:critical && npm run htaccess"
+    "build": "npm run moveBuild && npm run prefixCss && npm run ugli:HJCI && npm run htaccess"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.21",
