@@ -7,10 +7,12 @@ do
 	if [ $f == 0 ]
 	then
 		d=${d//\\//}
+		d=${d////}
 		f="$d/"
 		continue
 	fi
 	d=${d//\\//}
+	d=${d////}
 	d=${d#"$f"}
 	if [ -d "$d/dist/" ]
 	then
