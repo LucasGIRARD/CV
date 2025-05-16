@@ -11,7 +11,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4.2.2
       - name: Install missings
-        run: apt-get install libpng-dev -y --no-install-recommends
+        run: sudo apt-get install libpng-dev -y --no-install-recommends
       - name: Install dependencies
         run: npm install --omit=optional
       - name: Build dependencies
