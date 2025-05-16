@@ -24,14 +24,10 @@
     "build": "npm run moveBuild && npm run prefixCss && npm run ugli:HJCI && npm run opti:critical && npm run htaccess"
   },
   "devDependencies": {
-    "autoprefixer": "^9.1.5",
+    "autoprefixer": "^10.4.21",
     "caaf": "^1.0.1",
-    "concurrently": "^9.1.2",
-    "critical": "^1.2.2",
-    "livereload": "^0.7.0",
-    "postcss-cli": "^6.0.0",
-    "sass": "^1.77.8",
-    "watchy": "^0.9.4"
+    "critical": "^7.2.1",
+    "postcss-cli": "^11.0.1"
   },
   "dependencies": {
     "gumshoejs": "^5.1.2",
@@ -39,5 +35,11 @@
     "purecss": "github:pure-css/pure",
     "sweetalert2": "^11.21.0",
     "tarteaucitronjs": "^1.21.0"
+  },
+  "optionalDependencies": {
+    "concurrently": "^9.1.2",
+    "livereload": "^0.9.3",
+    "sass": "^1.77.8",
+    "watchy": "^0.10.2"
   }
 }
