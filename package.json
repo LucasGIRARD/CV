@@ -17,7 +17,7 @@
     "ugli:HJCI": "caaf www",
     "preopti:critical": "mv www/index.html www/index.nmin.html",
     "opti:critical": "critical www/index.nmin.html --base www --inline > www/index.html",
-    "htaccess": "shopt -s dotglob;mv www/.htaccess2 www/.htaccess",
+    "htaccess": "mv www/.htaccess2 www/.htaccess",
     "debug:powershell:cmd1": "Get-Process -Id (Get-NetTCPConnection -LocalPort 35729).OwningProcess",
     "debug:powershell:cmd2": "Stop-Process -Id ***",
     "dev": "concurrently --kill-others \"npm run watchy:sass\" \"npm run livereload\"",
