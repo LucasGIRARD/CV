@@ -14,6 +14,8 @@ jobs:
         run: sudo add-apt-repository ppa:linuxuprising/libpng12 && sudo apt update && sudo apt-get install libpng12-0 -y --no-install-recommends
       - name: Install dependencies
         run: npm install --omit=optional
+      - name: import dependencies
+        run: npm run module
       - name: Build dependencies
         run: npm run build
       - name: Archive production artifact
