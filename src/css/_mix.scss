@@ -1,0 +1,172 @@
+.mixSection {
+	padding-bottom: 96px;
+}
+
+#culture {
+	background-image: url($mixBg);
+	background-color: rgba(0, 0, 0, 0.6);
+	background-size: 200px;
+    background-blend-mode: darken;
+	background-attachment: fixed;
+	
+}
+
+.mixWrap {
+	backdrop-filter: blur(1px);
+}
+
+.mixSection ul {
+	margin: 20px;
+	text-align: center;
+}
+
+.mixSection ul li {
+	margin-top: 10px;
+	background-color: rgba(0, 0, 0, 0.2);
+	backdrop-filter: blur(6px);
+}
+
+.mixSection button {
+	-webkit-text-stroke: 0.5px;
+	padding: 10px 30px;
+	border: $mixButtonBorder;
+}
+
+.mix {
+	position: relative;
+	overflow: hidden;
+	box-sizing: border-box;
+	padding: 10px 3%;
+	background-clip: content-box;
+	background-color: $mixTextBg;
+	text-align: center;
+}
+
+@media screen and (min-width:768px) {
+.mix {
+		padding: 10px 1%;
+	}
+}
+
+#skills .mix>div:not(.popupContent),
+#xps .mix>div:not(.popupContent),
+#culture .mix>div:not(.popupContent) {
+	user-select: none;
+	cursor: pointer;
+	
+}
+
+#skills .mix>.pure-g>.pure-u-1:nth-child(2),
+#xps .mix>.pure-g>.pure-u-1:nth-child(2),
+#xps .mix>div>.pure-g>div:nth-child(2),
+#culture .mix>.pure-g>.pure-u-1:nth-child(2)  {
+margin-bottom: 30px;
+}
+
+.mix>div:not(.popupContent)>div, .mix>div:not(.popupContent)>div>div>div {
+	align-items: center;
+}
+
+.mix>div>h3,
+.mix>div>img {
+	margin: auto;
+}
+
+
+
+.mix h3 {
+	color: $text;
+	margin: 12px 0;
+}
+
+.mix img {
+	margin: 4px 0;
+}
+
+.mix span+div img {
+	margin-bottom: 20px;
+}
+
+.mix>div:not(.popupContent) {
+	margin: 0 4px;
+}
+
+.mix>div.pure-g {
+	height: 100%;
+	align-content: center;
+}
+
+.mix>div>div::before {
+  content: " ";
+  display: inline-block;
+  height: 100%;
+  width: 1px;
+  vertical-align: middle;
+}
+
+.mix>div>div>h3 , .mix>div>div>span, .mix>div>div>img {
+	max-width: calc(100% - 8px);
+	display: inline-block;
+}
+
+#skills h3 {
+	vertical-align: middle;
+	display: inline-block;
+}
+
+.mix {
+	font-size: 0;
+}
+
+.mix>* {
+	font-size: initial;
+}
+
+
+.mix>span {
+	font-size: 14px;
+	padding: 4px;
+	border: 1px solid $mixSpanBorder;
+	height: 28px;
+	background-color: $mixSpanBg;
+	text-align: center;
+	display: inline-block;
+	box-sizing: border-box;
+}
+
+.mix .icon {
+	font-size: 30px;
+	line-height: 60px;
+}
+
+.mix .date {
+	width: 28%;
+}
+
+.mix .poste {
+	width: 52%;
+}
+
+.mix .type {
+	width: 20%;
+}
+
+.mix .where, .mix .version, .mix .nbrVideos {
+	width: 72%;
+	text-align: right;
+}
+
+.mix .lu, .mix .nlu {
+	width: 100%;
+}
+
+.mix .lu {
+	background-color: $mixLu;
+}
+.mix .nlu {
+	background-color: $mixNLu;
+}
+
+.mix .nbrVideos::before {
+	content: 'vidéos "vue" : '
+}

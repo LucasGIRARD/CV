@@ -1,0 +1,71 @@
+html {
+	scroll-behavior: smooth;
+	scroll-padding-top : 54px;
+}
+
+body {
+	font-family: Verdana;
+}
+
+header {
+	z-index: 999;
+	top: 0;
+	position: fixed;
+	width: 100%;
+}
+
+header>div>div {
+	background-color: $headerBg;
+	border-bottom: $headerBorder;
+	padding: 8px 0;
+}
+
+section {
+	overflow-y: auto;
+	margin-top: 80px;
+}
+
+footer {
+	margin-top: 80px;
+	background-image: url($footerBg);
+	background-size: 100% 100%;
+	text-align: center;
+	text-shadow: $textShadow;
+	transition: 0.7s all;
+}
+
+
+h1,
+h2,
+h3 {
+	text-align: center;
+}
+
+h1 {
+	margin: 80px 0;
+}
+
+h2:not(#swal2-title) {
+	margin-top: 0;
+	padding: 10px 0;
+	background-color: $mixH2Bg;
+	color: $h2;
+}
+
+a {
+	opacity: 0.6;
+}
+
+p {
+	color: $text;
+	line-height: 24px;
+	font-size: 14px;
+	font-weight: 100;
+	text-shadow: $textShadow;
+}
+
+
+ul {
+	padding: 0;
+	list-style: none;
+}
