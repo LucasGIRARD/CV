@@ -1,0 +1,92 @@
+#logo {
+	margin: 13px;
+	margin-left: 20px;
+}
+
+
+
+#menu {
+	left: -100%;
+	height: 0;
+	z-index: 1000;
+	position: relative;
+	transition: all 0.7s, height 0.1s 1s;
+}
+
+.menuOpen #menu {
+	height: 100%;
+	left: 0;
+}
+
+@media screen and (min-width: 1920px) {
+	#menu {
+		left: unset;
+		height: 100%;
+	}
+
+	.pure-menu-item {
+		width: auto;
+		display: inline-block;
+	}
+}
+
+
+#menu a {
+	padding: 9.8px 16px;
+}
+
+#menuLink {
+	height: 42px;
+	width: 42px;
+	padding: 4px;
+
+	vertical-align: middle;
+	background-color: transparent;
+}
+
+.menuLink {
+	display: inline-block;
+}
+
+#menuLink span,
+#menuLink span:after,
+#menuLink span:before {
+	background-color: $menuLogoBg;
+	height: 3px;
+	pointer-events: none;
+	width: 100%;
+}
+
+#menuLink span {
+	display: block;
+	position: relative;
+}
+
+#menuLink span:before,
+#menuLink span:after {
+	content: " ";
+	position: absolute;
+	left: 0;
+	transition: 0.7s all;
+}
+
+#menuLink span:before {
+	top: -.55em;
+}
+
+#menuLink span:after {
+	top: .55em;
+	height: 3.5px;
+}
+
+.menuOpen #menuLink span {
+	background-color: transparent;
+}
+
+.menuOpen #menuLink span:before {
+	transform: rotate(45deg) translate(.5em, .4em);
+}
+
+.menuOpen #menuLink span:after {
+	transform: rotate(-45deg) translate(.4em, -.3em);
+}

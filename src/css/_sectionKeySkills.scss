@@ -1,0 +1,71 @@
+#keySkills {
+	text-align: center;
+}
+
+#keySkills>div>div>div {
+	padding: 16px;
+	border-bottom: $topGridsBorder;
+
+}
+
+#keySkills>div>div:nth-child(4)>div {
+	border-bottom: 0;
+}
+
+
+@media screen and (min-width:568px) and (max-width:1023.99px) {
+	#keySkills>div>div>div {
+		border-right: $topGridsBorder;
+	}
+
+	#keySkills>div>div:nth-child(2)>div,
+	#keySkills>div>div:nth-child(4)>div {
+		border-right: 0;
+	}
+
+	#keySkills>div>div:nth-child(3)>div {
+		border-bottom: 0;
+	}
+}
+
+@media screen and (min-width:1024px) {
+	#keySkills>div>div>div {
+		border-bottom: 0;
+		border-right: $topGridsBorder;
+	}
+
+	#keySkills>div>div:nth-child(4)>div {
+	border-right: 0;
+}
+}
+
+#keySkills span {
+	width: 80px;
+	height: 80px;
+	display: inline-block;
+	margin: 8px 0 10px 0;
+}
+
+#keySkills h3 {
+	height: 50px;
+}
+
+#man {
+	background-image: url($logosBg);
+	background-position: -333px 6px;
+}
+
+#monitor {
+	background-image: url($logosBg);
+	background-position: 7px 6px;
+}
+
+#photo {
+	background-image: url($logosBg);
+	background-position: -158px 6px;
+}
+
+#spare {
+	background-image: url($logosBg);
+	background-position: -417px 6px;
+}

@@ -1,0 +1,159 @@
+
+.blackBg {
+	background-color: $black;
+}
+
+.p10 {
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+.darkBg {
+	color: $white;
+}
+
+.darkBg a {
+	color: $linkDark;
+	transition: 0.7s all;
+}
+
+.darkBg button {
+	color: $white;
+	transition: 0.7s all;
+}
+
+.darkBg a:hover,
+.darkBg a:focus,
+.darkBg a:active,
+.darkBg a.active,
+.darkBg .active a {
+	background-color: initial;
+	color: $linkDark;
+	opacity: 1;
+	text-decoration: underline;
+}
+
+.darkBg button.pure-button:hover,
+.darkBg button.mixitup-control-active {
+	border-color: $mixButtonHover;
+	background-color: unset;
+}
+
+a.pure-button,
+button.pure-button {
+	background-color: transparent;
+	border: 1px solid $border;
+}
+
+a.pure-button:hover,
+button.pure-button:hover {
+	background-color: $linkHoverBg;
+}
+
+.darkBg p {
+	color: $textDark;
+}
+
+
+.left {
+	text-align: left;
+}
+
+@media screen and (min-width: 768px) {
+	.md-left {
+	text-align: left;
+}
+}
+
+.center {
+	text-align: center;
+}
+
+.right {
+	text-align: right;
+}
+
+.middle {
+	vertical-align: middle;
+}
+
+html body .middleOK {
+	margin-top: 20%;
+}
+
+.wrapWidth {
+	margin: 0 10px;
+}
+@media screen and (min-width: 1280px) {
+	.wrapWidth-xl {
+		max-width: 70%;
+		margin: auto;
+	}
+}
+@media screen and (min-width: 1920px) {
+	.wrapWidth-xxl {
+		max-width: 70%;
+		margin: auto;
+	}
+}
+
+.inline {
+	display: inline-block;
+}
+
+.inlineUl {
+	font-size: 0;
+}
+
+.inlineUl li {
+	font-size: initial;
+	display: inline-block;
+}
+
+.popupContent {
+	display: none;
+}
+
+.w1 {
+	width: 1%;
+}
+
+.w10 {
+	width: 10%;
+}
+
+.w20 {
+	width: 20%;
+}
+
+.w30 {
+	width: 30%;
+}
+
+.w40 {
+	width: 40%;
+}
+
+.w50 {
+	width: 50%;
+}
+
+.w60 {
+	width: 60%;
+}
+
+.w70 {
+	width: 70%;
+}
+
+.w80 {
+	width: 80%;
+}
+
+.w90 {
+	width: 90%;
+}
+
+.w100 {
+	width: 100%;
+}

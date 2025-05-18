@@ -1,5 +1,6 @@
 | Task | Made |
 |--|:-:|
+| cd | :heavy_check_mark: |
 | email | :heavy_check_mark: |
 | check breakpoint + js | :heavy_check_mark: |
 | colour | :x: |
@@ -7,7 +8,7 @@
 | Cloudflare dns+Turnstile+honeypot | :x: |
 | seo | :x: |
 | rgpd | :x: |
-| ci | :x: |
+| ci | :heavy_check_mark: |
 | scrapp img | :x: |
 | deploy | :x: |
 | social | :x: |

@@ -1,0 +1,43 @@
+footer li {
+	margin-bottom: 12px;
+	line-height: 24px;
+}
+
+footer form.pure-form input[type=text],
+footer form.pure-form input[type=email],
+footer form.pure-form textarea {
+	background-color: $inputBg;
+	color: $input;
+	padding: 16px;
+	box-shadow: unset;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+	-webkit-box-shadow: 0 0 0 30px $inputBg inset !important;
+	-webkit-text-fill-color: $input !important;
+}
+
+footer form.pure-form input::placeholder,
+footer form.pure-form textarea::placeholder {
+	color: $input;
+	opacity: 0.8;
+}
+
+form.pure-form input:invalid,
+form.pure-form textarea:invalid {
+	z-index: 9;
+	color: unset;
+	border-color: $inputInvalid;
+}
+
+form.pure-form input:focus:invalid,
+form.pure-form textarea:invalid:focus {
+	color: unset;
+}
+
+footer form.pure-form button {
+	font-size: 20px;
+}
