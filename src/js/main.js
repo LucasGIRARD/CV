@@ -226,14 +226,17 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     /******************************************GOOGLE ANALITICS******************************************/
-    // var _gaq = _gaq || [];
-    // _gaq.push(['_setAccount', 'UA-34537753-1']);
-    // _gaq.push(['_trackPageview']);
-    // var ga = document.createElement('script');
-    // ga.type = 'text/javascript';
-    // ga.async = true;
-    // ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    // var s = document.getElementsByTagName('script')[0];
-    // s.parentNode.insertBefore(ga, s);
+    tarteaucitron.user.gtagUa = 'G-PQV4SGSTZK';
+    tarteaucitron.user.gtagMore = function () { /* add here your optionnal gtag() */ };
+    (tarteaucitron.job = tarteaucitron.job || []).push('gtag');
+
+    // <!-- Google tag (gtag.js) -->
+    // <script async src="https://www.googletagmanager.com/gtag/js?id=G-PQV4SGSTZK"></script>
+    // <script>
+    //   window.dataLayer = window.dataLayer || [];
+    //   function gtag(){dataLayer.push(arguments);}
+    //   gtag('js', new Date());
+    //   gtag('config', 'G-PQV4SGSTZK');
+    // </script>
     /******************************************FIN GOOGLE ANALITICS******************************************/
 });

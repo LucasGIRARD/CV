@@ -1,0 +1,21 @@
+dn: cn=Lucas GIRARD,mail=emploi@lucas-girard.fr
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+objectclass: mozillaAbPersonAlpha
+givenName: Lucas
+sn: GIRARD
+cn: Lucas GIRARD
+mail: emploi@lucas-girard.fr
+modifytimestamp: 1747639577
+mobile: 07 70 64 67 09
+mozillaHomeStreet: 32 rue Paul Vaillant Couturier
+mozillaHomeLocalityName: Maisons-Alfort
+mozillaHomePostalCode: 94700
+mozillaHomeCountryName: FRANCE
+mozillaWorkUrl: https://www.lucas-girard.fr
+birthyear: 1988
+birthmonth: 10
+birthday: 7
+
