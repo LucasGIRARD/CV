@@ -3,7 +3,7 @@ header('Content-Security-Policy: default-src \'self\'');
 header('Referrer-Policy: strict-origin-when-cross-origin');
 header('X-Frame-Options: DENY');
 
-$allowedOrigins = ['http://cv.loc', 'https://cv.loc', 'https://cv.lucas-girard.fr'];
+$allowedOrigins = ['http://cv.loc', 'https://cv.loc', 'https://lucas-girard.fr', 'https://cv.lucas-girard.fr', 'https://www.lucas-girard.fr'];
 
 if (isset($_SERVER['HTTP_ORIGIN'])) {
     if (!in_array($_SERVER['HTTP_ORIGIN'], $allowedOrigins)) {
