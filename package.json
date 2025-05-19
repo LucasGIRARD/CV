@@ -8,7 +8,6 @@
   "scripts": {
     "premodule": "rm -rf src/vendors/node_modules/*; mkdir -p src/vendors/node_modules",
     "module": "./module.sh",
-    "t": "./t.sh",
     "livereload": "livereload \"src\"",
     "sass": "sass --no-source-map src/css/style.scss src/css/style.css",
     "watchy:sass": "watchy -w 'src/css/*.scss' -- bash -c 'npm run sass'",
