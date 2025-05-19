@@ -1,0 +1,12 @@
+BEGIN:VCARD
+VERSION:4.0
+N:GIRARD;Lucas;;;
+TEL;TYPE=cell;VALUE=TEXT:07 70 64 67 09
+FN:Lucas GIRARD
+UID:f131f660-6144-450f-8742-c09033f34e90
+EMAIL;PREF=1:emploi@lucas-girard.fr
+URL:https://www.lucas-girard.fr
+ADR;TYPE=home:;;32 rue Paul Vaillant Couturier;Maisons-Alfort;;94700;FRANCE
+TZ:Europe/Paris
+BDAY;VALUE=DATE:19881007
+END:VCARD

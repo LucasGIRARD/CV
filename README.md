@@ -18,6 +18,6 @@
 | old cv inspect | :x: |
 | actual tools & webtools | :x: |
 | |  |
-| opti img | :x: |
+| opti img | :heavy_check_mark: |
 | defaut modulejs tarteaucitron | :x: |
 |  |  |
