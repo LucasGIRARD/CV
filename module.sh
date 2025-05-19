@@ -1,6 +1,6 @@
 #!/bin/bash
 f=0
-for d in $(npm ls --depth 0 --prod --parseable | tr -d '\r')
+for d in $(npm ls --depth 0 --parseable -omit=optional -omit=dev | tr -d '\r')
 do
 	l=0
 	j=0
