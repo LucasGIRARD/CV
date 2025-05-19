@@ -10,10 +10,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4.2.2
-      - name: Install missings
-        run: sudo add-apt-repository ppa:linuxuprising/libpng12 && sudo apt update && sudo apt-get install libpng12-0 -y --no-install-recommends
       - name: Install dependencies
-        run: npm install --omit=optional
+        run: npm install --omit=optional && npm install -D imagemin-gifsicle
       - name: import dependencies
         run: sudo chmod 777 module.sh && npm run module
       - name: Build dependencies
