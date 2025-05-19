@@ -8,14 +8,19 @@
   "scripts": {
     "premodule": "rm -rf src/vendors/node_modules/*; mkdir -p src/vendors/node_modules",
     "module": "./module.sh",
-    "t": "./t.sh",
     "livereload": "livereload \"src\"",
     "sass": "sass --no-source-map src/css/style.scss src/css/style.css",
     "watchy:sass": "watchy -w 'src/css/*.scss' -- bash -c 'npm run sass'",
     "premoveBuild": "rm -rf www",
     "moveBuild": "cp -r src www",
+    "postmoveBuild": "rm www/css/*.scss",
     "prefixCss": "postcss www/css/*.css -r --use autoprefixer",
-    "ugli:HJCI": "caaf www",
+    "preugli:H": "mv www/index.html www/index.Nmin.html",
+    "ugli:H": "html-minifier-terser --collapse-whitespace --remove-comments --minify-js true www/index.Nmin.html>www/index.html",
+    "ugli:J": "uglifyjs www/js/main.js -o www/js/main.js",
+    "ugli:C": "purifycss www/css/*.css www/vendors/*.css www/js/*.js www/index.html --min -o www/css/style.css",
+    "ugli:I": "imagemin images/*",
+    "ugli": "npm run ugli:H && npm run ugli:J && npm run ugli:C && npm run ugli:I",
     "preopti:critical": "mv www/index.html www/index.nmin.html",
     "opti:critical": "critical www/index.nmin.html --base www --inline > www/index.html",
     "htaccess": "mv www/.htaccess2 www/.htaccess",
@@ -23,13 +28,16 @@
     "debug:powershell:cmd2": "Stop-Process -Id ***",
     "dev": "concurrently --kill-others \"npm run watchy:sass\" \"npm run livereload\"",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm run moveBuild && npm run prefixCss && npm run ugli:HJCI && npm run htaccess"
+    "build": "npm run moveBuild && npm run prefixCss && npm run ugli && npm run htaccess"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.21",
-    "caaf": "^1.0.1",
     "critical": "^7.2.1",
-    "postcss-cli": "^11.0.1"
+    "html-minifier-terser": "^7.2.0",
+    "imagemin-cli": "^8.0.0",
+    "postcss-cli": "^11.0.1",
+    "purify-css": "^1.2.5",
+    "uglify-js": "^3.19.3"
   },
   "dependencies": {
     "gumshoejs": "^5.1.2",
