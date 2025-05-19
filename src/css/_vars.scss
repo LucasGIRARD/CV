@@ -1,7 +1,7 @@
 $black: #000000;
 $blackBrown: #1e1912;
 $white: #ffffff;
-$whiteLight: #e3e3e3;
+$whiteLight: #fff6e5;
 $grey: #5F5F5F;
 $greyLight: #dddddd;
 
@@ -13,52 +13,54 @@ $orange: #f37b1d;
 $yellow: #fad232;
 
 
-
-
 $brown: #7e6a53;
 // $orange: #ff7d13;
-$green2: #000000;
+$green2: #244224;
 
-
-
+$bodyBg: $whiteLight;
 $headerBg: $blackBrown;
-$menuLogoBg: $white;
-$linkHoverBg: $white;
+//$menuLogoBg: $white;
+$menuLogoBg: $orange;
+$linkHoverBg: $whiteLight;
+
+//$skillsBg: radial-gradient(circle,$green, $green2);
 
 $footerBg: $blackBrown;
 
-
-$inputBg: $brown;
+$inputBg: $whiteLight;
 $mixH2Bg: $blackBrown;
-$mixTextBg: $white;
-$mixSpanBg: $white;
+$mixTextBg: $whiteLight;
+$mixSpanBg: $whiteLight;
 
 $mixLu: $green;
-$mixNLu: $red;
+$mixNLu: $red; 
+
+$progressBarBg: $whiteLight;
 
 
-$progressBarBg: #e0e0e0;
-
-
-
-$footerBg: '../images/footer-bg.jpg';
-$logosBg: '../images/image-sprit.png';
-$mixBg: '../images/culture/logo-youtube-rss-www-book.png';
+$logosBg: '../images/keySkills/image-sprit.png';
+$formationsBg: '../images/formations/background.png';
+$ProjectsBg: '../images/projects/background.png';
+$SkillsBg: '../images/skills/background.png';
+$XpsBg: '../images/xps/background.png';
+$cultureBg: '../images/culture/logo-youtube-rss-www-book.png';
+$footerBg: '../images/contact/background.png';
 $toTopBg: '../images/move-top.png';
 
-$h2: $white;
+$h2: $whiteLight;
 $border: $whiteLight;
-$input: $white;
+$input: $blackBrown;
 $linkDark: $orange;
-$mixButtonHover: $white;
+$mixButtonHover: $whiteLight;
 $text: $grey;
 $textDark: $whiteLight;
-$progressBar: #659cef;
+$progressBar: $green;
+
+// $link: #0000ff;
 
 $inputInvalid: $red;
 
 $mixSpanBorder: $grey;
-
 
 $headerBorder: 1px solid $blackBrown;
 $mixButtonBorder: 2px solid $grey;

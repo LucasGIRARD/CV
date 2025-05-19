@@ -1,27 +1,22 @@
-/*font-family: Courier New;*/
-/*font-family: Brush Script MT;*/
+@import 'vars';
+@import 'html';
+@import 'class';
+@import 'progressBar';
 
-// $link: #0000ff;
+@import 'sectionHeader';
+@import 'sectionHome';
+@import 'sectionKeySkills';
+@import 'sectionPresentation';
 
-@use 'vars' as *;
-@use 'html' as *;
-@use 'class' as *;
-@use 'progressBar' as *;
+@import 'mix';
 
-@use 'sectionHeader' as *;
-@use 'sectionHome' as *;
-@use 'sectionKeySkills' as *;
-@use 'sectionPresentation' as *;
+@import 'sectionSkills';
+@import 'sectionXps';
+@import 'sectionFormations';
+@import 'sectionProjects';
+@import 'sectionCulture';
+@import 'sectionFooter';
 
-@use 'mix' as *;
-
-@use 'sectionSkills' as *;
-@use 'sectionXps' as *;
-@use 'sectionFormations' as *;
-@use 'sectionProjects' as *;
-@use 'sectionCulture' as *;
-@use 'sectionFooter' as *;
-
-@use 'toTop' as *;
-@use 'swal2' as *;
-@use 'pureShow' as *;
+@import 'toTop';
+@import 'swal2';
+@import 'pureShow';

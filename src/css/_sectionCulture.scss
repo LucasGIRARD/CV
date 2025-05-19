@@ -1,3 +1,26 @@
+#culture {
+	background-image: url($cultureBg);
+	background-size: 200px;
+	background-repeat: repeat;
+}
+
+.mix .lu,
+.mix .nlu {
+	width: 100%;
+}
+
+.mix .lu {
+	background-color: $mixLu;
+}
+
+.mix .nlu {
+	background-color: $mixNLu;
+}
+
+.mix .nbrVideos::before {
+	content: 'vidéos "vue" : '
+}
+
 #culture .rss img {
 	height: 70px;
 }
@@ -5,3 +28,4 @@
 #culture .yt img {
 	height: 70px;
 }
+
