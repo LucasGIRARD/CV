@@ -1,8 +1,10 @@
 #logo {
-	margin: 13px;
+	margin: 0px;
 	margin-left: 20px;
+	font-family: 'Brush Script MT', 'Courier New', Verdana;
+	text-decoration: dashed;
+	font-size: 30px;
 }
-
 
 
 #menu {
@@ -36,12 +38,18 @@
 }
 
 #menuLink {
+	opacity: 0.8;
 	height: 42px;
 	width: 42px;
 	padding: 4px;
+	margin-left: 8px;
 
 	vertical-align: middle;
 	background-color: transparent;
+}
+
+#menuLink:hover {
+	opacity: 1;
 }
 
 .menuLink {

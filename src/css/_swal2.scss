@@ -1,3 +1,6 @@
+
+
+
 .swal2-container div.swal2-popup {
 	max-width: 75%;
 	width: auto;
@@ -7,10 +10,21 @@
 	text-align: left;
 }
 
+
 .swal2-html-container {
 	line-height: 18px;
 }
 
+#swal2-title {
+	margin-right: 25px;
+}
+
 .swal2-html-container span {
 	font-size: 12px;
+}
+
+.swal2-modal button {
+	background-color: transparent;
+    border: 1px solid #e3e3e3;
+	color: rgba(0, 0, 0, .8);
 }
