@@ -1,4 +1,11 @@
 
+.cryptMai:after {
+  content: attr(data-name) "@" attr(data-domain) "." attr(data-tld); 
+}
+.cryptTe:after {
+  content: attr(data-one) attr(data-two); 
+}
+
 .blackBg {
 	background-color: $black;
 }

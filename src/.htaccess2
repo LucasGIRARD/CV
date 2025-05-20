@@ -28,6 +28,11 @@ RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 Options -Indexes
 
+<FilesMatch "\.(ldif|pdf)$">
+   ForceType application/octet-stream
+   Header set Content-Disposition attachment
+</FilesMatch>
+
 <FilesMatch "\.(html?|css|js)$">
     SetOutputFilter DEFLATE
 </FilesMatch>
