@@ -4,8 +4,8 @@
 	background-blend-mode: darken;
 	background-attachment: fixed;
 	background-position: 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .mixSection ul {
@@ -27,6 +27,9 @@
 
 .mixWrap {
 	backdrop-filter: blur(6px);
+	max-height: 70vh;
+	overflow-y: scroll;
+	scrollbar-color: $scrollBar $scrollbarBg;
 }
 
 .mix {
@@ -34,22 +37,25 @@
 	overflow: hidden;
 	box-sizing: border-box;
 	padding: 10px 3%;
+	padding-bottom: 36px !important;
 	background-clip: content-box;
 	background-color: $mixTextBg;
 	text-align: center;
-}
-.mix {
 	font-size: 0;
 }
+
 @media screen and (min-width:768px) {
 	.mix {
 		padding: 10px 1%;
+		padding-bottom: 36px !important;
 	}
 }
+
 .mix>div.pure-g {
 	height: 100%;
 	align-content: center;
 }
+
 .mix>div:not(.popupContent) {
 	margin: 0 4px;
 }

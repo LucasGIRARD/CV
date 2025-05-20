@@ -72,6 +72,14 @@ ul {
   list-style: none;
 }
 
+.cryptMai:after {
+  content: attr(data-name) "@" attr(data-domain) "." attr(data-tld);
+}
+
+.cryptTe:after {
+  content: attr(data-one) attr(data-two);
+}
+
 .blackBg {
   background-color: #000000;
 }
@@ -567,6 +575,9 @@ html body .middleOK {
 
 .mixWrap {
   backdrop-filter: blur(6px);
+  max-height: 70vh;
+  overflow-y: scroll;
+  scrollbar-color: #fff6e5 #1e1912;
 }
 
 .mix {
@@ -574,18 +585,17 @@ html body .middleOK {
   overflow: hidden;
   box-sizing: border-box;
   padding: 10px 3%;
+  padding-bottom: 36px !important;
   background-clip: content-box;
   background-color: #fff6e5;
   text-align: center;
-}
-
-.mix {
   font-size: 0;
 }
 
 @media screen and (min-width: 768px) {
   .mix {
     padding: 10px 1%;
+    padding-bottom: 36px !important;
   }
 }
 .mix > div.pure-g {

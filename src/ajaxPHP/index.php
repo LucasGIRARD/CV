@@ -12,7 +12,7 @@ if (isset($_SERVER['HTTP_ORIGIN'])) {
     }
 }
 
-$allowedOrigins = ['cv.loc', 'cv.lucas-girard.fr',];
+$allowedOrigins = ['cv.loc', 'cv.lucas-girard.fr','www.lucas-girard.fr'];
 
 if (isset($_SERVER['HTTP_REFERER'])) {
     $referer = parse_url($_SERVER['HTTP_REFERER']);
