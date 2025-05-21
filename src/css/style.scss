@@ -1,3 +1,10 @@
+@font-face {
+  font-family: "Ephesis";
+  src:
+    local("Ephesis"),
+    url("../font/Ephesis-Regular.ttf") format("opentype"),
+}
+
 @import 'vars';
 @import 'html';
 @import 'class';

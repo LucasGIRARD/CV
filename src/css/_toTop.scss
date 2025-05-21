@@ -6,7 +6,7 @@ html body {
 	z-index: 99999999;
 	position: fixed;
 	bottom: 10px;
-	right: 30px;
+	right: 70px;
 	background-image: url($toTopBg);
 	background-repeat: no-repeat;
 	background-position: 50%;
@@ -28,8 +28,4 @@ html body {
 	to {
 		bottom: 20px;
 	}
-}
-
-#tarteaucitronRoot .tarteaucitronIconBottomRight {
-	right: 80px;
 }
