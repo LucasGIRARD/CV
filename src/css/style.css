@@ -77,6 +77,10 @@ ul {
   list-style: none;
 }
 
+li {
+  margin-bottom: 4px;
+}
+
 .cryptMai:after {
   content: attr(data-name) "@" attr(data-domain) "." attr(data-tld);
 }
@@ -540,12 +544,12 @@ html body .middleOK {
 }
 
 #presentation > div > div:nth-child(2),
-#presentation > div > div:nth-child(4) {
+#presentation > div > div:nth-child(3) {
   display: table;
 }
 
 #presentation > div > div:nth-child(2) > div,
-#presentation > div > div:nth-child(4) > div {
+#presentation > div > div:nth-child(3) > div {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
@@ -849,6 +853,15 @@ html body {
   background-color: transparent;
   border: 1px solid #e3e3e3;
   color: rgba(0, 0, 0, 0.8);
+}
+
+.swal2-html-container table {
+  border-collapse: collapse;
+}
+
+.swal2-html-container td {
+  padding: 4px 0;
+  border-bottom: 1px solid #dddddd;
 }
 
 /*
