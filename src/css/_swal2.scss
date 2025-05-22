@@ -28,3 +28,12 @@
     border: 1px solid #e3e3e3;
 	color: rgba(0, 0, 0, .8);
 }
+
+.swal2-html-container table {
+	border-collapse: collapse;
+}
+
+.swal2-html-container td {
+	padding: 4px 0;
+	border-bottom: 1px solid $greyLight;
+}

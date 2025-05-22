@@ -15,12 +15,12 @@
 }
 
 #presentation>div>div:nth-child(2),
-#presentation>div>div:nth-child(4) {
+#presentation>div>div:nth-child(3) {
 	display: table;
 }
 
 #presentation>div>div:nth-child(2)>div,
-#presentation>div>div:nth-child(4)>div {
+#presentation>div>div:nth-child(3)>div {
 	display: table-cell;
 	vertical-align: middle;
 	text-align: center;
