@@ -1,0 +1,74 @@
+div.stars {
+	display: inline-block;
+	padding: 3px;
+	padding-right: 0px;
+	border-radius: 3px;
+	vertical-align: middle;
+}
+
+div.stars>div {
+	height: 22px;
+    background-image: url(../images/star.svg);
+    background-position: center;
+    background-size: contain;
+	background-repeat: space;
+}
+
+
+td:has(div.stars)::after {
+	content: '';
+	height: 22px;
+	display: inline-block;
+	vertical-align: middle;
+	background-image: url(../images/star0.svg);
+	background-position: center;
+    background-size: contain;
+	background-repeat: space;
+}
+
+tr[data-progress="1"]>td>div.stars>div,
+tr[data-progress="10"]>td>div.stars>div,
+tr[data-progress="20"]>td>div.stars>div {
+	width: 22px;
+}
+
+tr[data-progress="1"]>td:has(div.stars)::after,
+tr[data-progress="10"]>td:has(div.stars)::after,
+tr[data-progress="20"]>td:has(div.stars)::after {
+	width: 100px;
+}
+
+tr[data-progress="30"]>td>div.stars>div,
+tr[data-progress="40"]>td>div.stars>div {
+	width: 48px;
+}
+
+tr[data-progress="30"]>td:has(div.stars)::after,
+tr[data-progress="40"]>td:has(div.stars)::after {
+	width: 74px;
+}
+
+tr[data-progress="50"]>td>div.stars>div,
+tr[data-progress="60"]>td>div.stars>div {
+	width: 74px;
+}
+
+tr[data-progress="50"]>td:has(div.stars)::after,
+tr[data-progress="60"]>td:has(div.stars)::after {
+	width: 48px;
+}
+
+tr[data-progress="70"]>td>div.stars>div,
+tr[data-progress="80"]>td>div.stars>div {
+	width: 100px;
+}
+
+tr[data-progress="70"]>td:has(div.stars)::after,
+tr[data-progress="80"]>td:has(div.stars)::after {
+	width: 22px;
+}
+
+tr[data-progress="90"]>td>div.stars>div,
+tr[data-progress="100"]>td>div.stars>div {
+	width: 126px;
+}

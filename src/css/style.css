@@ -246,118 +246,189 @@ html body .middleOK {
   width: 100%;
 }
 
-.progressBar {
-  width: 100%;
+div.progressBar {
+  display: inline-block;
+  width: calc(100% - 46px);
   background-color: #fff6e5;
   padding: 3px;
   border-radius: 3px;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+  vertical-align: middle;
 }
 
-.progressBar > div {
+div.progressBar > div {
   height: 22px;
   background-color: #5eb95e;
   border-radius: 3px;
   transition: width 500ms ease-in-out;
 }
 
-.progressBar > .w1::before {
+td:has(div.progressBar)::before {
   display: inline-block;
-  width: 100%;
   font-size: 10px;
-  text-align: center;
-  color: #fff6e5;
+  vertical-align: middle;
+}
+
+tr[data-progress="1"] > td > div.progressBar > div {
+  width: 30px;
+}
+
+tr[data-progress="1"] > td:has(div.progressBar)::before {
   content: "1%";
 }
 
-.progressBar > .w10::before {
-  display: inline-block;
-  width: 100%;
-  font-size: 10px;
-  text-align: center;
-  color: #fff6e5;
+tr[data-progress="10"] > td > div.progressBar > div {
+  width: 30px;
+}
+
+tr[data-progress="10"] > td:has(div.progressBar)::before {
   content: "10%";
 }
 
-.progressBar > .w20::before {
-  display: inline-block;
-  width: 100%;
-  font-size: 10px;
-  text-align: center;
-  color: #fff6e5;
+tr[data-progress="20"] > td > div.progressBar > div {
+  width: 30px;
+}
+
+tr[data-progress="20"] > td:has(div.progressBar)::before {
   content: "20%";
 }
 
-.progressBar > .w30::before {
-  display: inline-block;
-  width: 100%;
-  font-size: 10px;
-  text-align: center;
-  color: #fff6e5;
+tr[data-progress="30"] > td > div.progressBar > div {
+  width: 30px;
+}
+
+tr[data-progress="30"] > td:has(div.progressBar)::before {
   content: "30%";
 }
 
-.progressBar > .w40::before {
-  display: inline-block;
-  width: 100%;
-  font-size: 10px;
-  text-align: center;
-  color: #fff6e5;
+tr[data-progress="40"] > td > div.progressBar > div {
+  width: 40px;
+}
+
+tr[data-progress="40"] > td:has(div.progressBar)::before {
   content: "40%";
 }
 
-.progressBar > .w50::before {
-  display: inline-block;
-  width: 100%;
-  font-size: 10px;
-  text-align: center;
-  color: #fff6e5;
+tr[data-progress="50"] > td > div.progressBar > div {
+  width: 50px;
+}
+
+tr[data-progress="50"] > td:has(div.progressBar)::before {
   content: "50%";
 }
 
-.progressBar > .w60::before {
-  display: inline-block;
-  width: 100%;
-  font-size: 10px;
-  text-align: center;
-  color: #fff6e5;
+tr[data-progress="60"] > td > div.progressBar > div {
+  width: 60px;
+}
+
+tr[data-progress="60"] > td:has(div.progressBar)::before {
   content: "60%";
 }
 
-.progressBar > .w70::before {
-  display: inline-block;
-  width: 100%;
-  font-size: 10px;
-  text-align: center;
-  color: #fff6e5;
+tr[data-progress="70"] > td > div.progressBar > div {
+  width: 70px;
+}
+
+tr[data-progress="70"] > td:has(div.progressBar)::before {
   content: "70%";
 }
 
-.progressBar > .w80::before {
-  display: inline-block;
-  width: 100%;
-  font-size: 10px;
-  text-align: center;
-  color: #fff6e5;
+tr[data-progress="80"] > td > div.progressBar > div {
+  width: 80px;
+}
+
+tr[data-progress="80"] > td:has(div.progressBar)::before {
   content: "80%";
 }
 
-.progressBar > .w90::before {
-  display: inline-block;
-  width: 100%;
-  font-size: 10px;
-  text-align: center;
-  color: #fff6e5;
+tr[data-progress="90"] > td > div.progressBar > div {
+  width: 90px;
+}
+
+tr[data-progress="90"] > td:has(div.progressBar)::before {
   content: "90%";
 }
 
-.progressBar > .w100::before {
-  display: inline-block;
-  width: 100%;
-  font-size: 10px;
-  text-align: center;
-  color: #fff6e5;
+tr[data-progress="100"] > td > div.progressBar > div {
+  width: 100px;
+}
+
+tr[data-progress="100"] > td:has(div.progressBar)::before {
   content: "100%";
+}
+
+div.stars {
+  display: inline-block;
+  padding: 3px;
+  padding-right: 0px;
+  border-radius: 3px;
+  vertical-align: middle;
+}
+
+div.stars > div {
+  height: 22px;
+  background-image: url(../images/star.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: space;
+}
+
+td:has(div.stars)::after {
+  content: "";
+  height: 22px;
+  display: inline-block;
+  vertical-align: middle;
+  background-image: url(../images/star0.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: space;
+}
+
+tr[data-progress="1"] > td > div.stars > div,
+tr[data-progress="10"] > td > div.stars > div,
+tr[data-progress="20"] > td > div.stars > div {
+  width: 22px;
+}
+
+tr[data-progress="1"] > td:has(div.stars)::after,
+tr[data-progress="10"] > td:has(div.stars)::after,
+tr[data-progress="20"] > td:has(div.stars)::after {
+  width: 100px;
+}
+
+tr[data-progress="30"] > td > div.stars > div,
+tr[data-progress="40"] > td > div.stars > div {
+  width: 48px;
+}
+
+tr[data-progress="30"] > td:has(div.stars)::after,
+tr[data-progress="40"] > td:has(div.stars)::after {
+  width: 74px;
+}
+
+tr[data-progress="50"] > td > div.stars > div,
+tr[data-progress="60"] > td > div.stars > div {
+  width: 74px;
+}
+
+tr[data-progress="50"] > td:has(div.stars)::after,
+tr[data-progress="60"] > td:has(div.stars)::after {
+  width: 48px;
+}
+
+tr[data-progress="70"] > td > div.stars > div,
+tr[data-progress="80"] > td > div.stars > div {
+  width: 100px;
+}
+
+tr[data-progress="70"] > td:has(div.stars)::after,
+tr[data-progress="80"] > td:has(div.stars)::after {
+  width: 22px;
+}
+
+tr[data-progress="90"] > td > div.stars > div,
+tr[data-progress="100"] > td > div.stars > div {
+  width: 126px;
 }
 
 #logo {

@@ -1,113 +1,111 @@
-.progressBar {
-	width: 100%;
+div.progressBar {
+	display: inline-block;
+	width: calc(100% - 46px);
 	background-color: $progressBarBg;
 	padding: 3px;
 	border-radius: 3px;
 	box-shadow: inset 0 1px 3px $progressBarShadow;
+	vertical-align: middle;
 }
 
-.progressBar>div {
+div.progressBar>div {
 	height: 22px;
 	background-color: $progressBar;
 	border-radius: 3px;
 	transition: width 500ms ease-in-out;
 }
 
-.progressBar>.w1::before {
+td:has(div.progressBar)::before {
 	display: inline-block;
-	width: 100%;
 	font-size: 10px;
-	text-align: center;
-	color: $textDark;
+	vertical-align: middle;
+}
+
+tr[data-progress="1"]>td>div.progressBar>div {
+	width: 30px;
+}
+
+tr[data-progress="1"]>td:has(div.progressBar)::before {
 	content: '1%';
 }
 
-.progressBar>.w10::before {
-	display: inline-block;
-	width: 100%;
-	font-size: 10px;
-	text-align: center;
-	color: $textDark;
+tr[data-progress="10"]>td>div.progressBar>div {
+	width: 30px;
+}
+
+tr[data-progress="10"]>td:has(div.progressBar)::before {
+
 	content: '10%';
 }
 
-.progressBar>.w20::before {
-	display: inline-block;
-	width: 100%;
-	font-size: 10px;
-	text-align: center;
-	color: $textDark;
+tr[data-progress="20"]>td>div.progressBar>div {
+	width: 30px;
+}
+
+tr[data-progress="20"]>td:has(div.progressBar)::before {
 	content: '20%';
 }
 
-.progressBar>.w30::before {
-	display: inline-block;
-	width: 100%;
-	font-size: 10px;
-	text-align: center;
-	color: $textDark;
+tr[data-progress="30"]>td>div.progressBar>div {
+	width: 30px;
+}
+
+tr[data-progress="30"]>td:has(div.progressBar)::before {
 	content: '30%';
 }
 
-.progressBar>.w40::before {
-	display: inline-block;
-	width: 100%;
-	font-size: 10px;
-	text-align: center;
-	color: $textDark;
+tr[data-progress="40"]>td>div.progressBar>div {
+	width: 40px;
+}
+
+tr[data-progress="40"]>td:has(div.progressBar)::before {
 	content: '40%';
 }
 
-.progressBar>.w50::before {
-	display: inline-block;
-	width: 100%;
-	font-size: 10px;
-	text-align: center;
-	color: $textDark;
+tr[data-progress="50"]>td>div.progressBar>div {
+	width: 50px;
+}
+
+tr[data-progress="50"]>td:has(div.progressBar)::before {
 	content: '50%';
 }
 
-.progressBar>.w60::before {
-	display: inline-block;
-	width: 100%;
-	font-size: 10px;
-	text-align: center;
-	color: $textDark;
+tr[data-progress="60"]>td>div.progressBar>div {
+	width: 60px;
+}
+
+tr[data-progress="60"]>td:has(div.progressBar)::before {
 	content: '60%';
 }
 
-.progressBar>.w70::before {
-	display: inline-block;
-	width: 100%;
-	font-size: 10px;
-	text-align: center;
-	color: $textDark;
+tr[data-progress="70"]>td>div.progressBar>div {
+	width: 70px;
+}
+
+tr[data-progress="70"]>td:has(div.progressBar)::before {
 	content: '70%';
 }
 
-.progressBar>.w80::before {
-	display: inline-block;
-	width: 100%;
-	font-size: 10px;
-	text-align: center;
-	color: $textDark;
+tr[data-progress="80"]>td>div.progressBar>div {
+	width: 80px;
+}
+
+tr[data-progress="80"]>td:has(div.progressBar)::before {
 	content: '80%';
 }
 
-.progressBar>.w90::before {
-	display: inline-block;
-	width: 100%;
-	font-size: 10px;
-	text-align: center;
-	color: $textDark;
+tr[data-progress="90"]>td>div.progressBar>div {
+	width: 90px;
+}
+
+tr[data-progress="90"]>td:has(div.progressBar)::before {
 	content: '90%';
 }
 
-.progressBar>.w100::before {
-	display: inline-block;
-	width: 100%;
-	font-size: 10px;
-	text-align: center;
-	color: $textDark;
+tr[data-progress="100"]>td>div.progressBar>div {
+	width: 100px;
+}
+
+tr[data-progress="100"]>td:has(div.progressBar)::before {
 	content: '100%';
 }
