@@ -1,5 +1,5 @@
 {
-  "name": "CV",
+  "name": "c.v.",
   "version": "1.0.0",
   "author": "Lucas GIRARD",
   "license": "UNLICENSED",
@@ -24,6 +24,9 @@
     "preopti:critical": "mv www/index.html www/index.nmin.html",
     "opti:critical": "critical www/index.nmin.html --base www --inline > www/index.html",
     "htaccess": "mv www/.htaccess2 www/.htaccess",
+    "getImageList": "find src -type f \\( -name \"*.jpg\" -o -name \"*.jpeg\" -o -name \"*.png\" -o -name \"*.gif\" -o -name \"*.bmp\" \\) | sed 's#src/images/##' > image_files.txt",
+    "bimgc": "bimgc",
+    "htmlImg": "posthtml -c posthtml.json",
     "debug:powershell:cmd1": "Get-Process -Id (Get-NetTCPConnection -LocalPort 35729).OwningProcess",
     "debug:powershell:cmd2": "Stop-Process -Id ***",
     "dev": "concurrently --kill-others \"npm run watchy:sass\" \"npm run livereload\"",
@@ -47,8 +50,11 @@
     "tarteaucitronjs": "^1.21.0"
   },
   "optionalDependencies": {
+    "bimgc": "^0.2.7",
     "concurrently": "^9.1.2",
     "livereload": "^0.9.3",
+    "posthtml-cli": "^0.10.0",
+    "posthtml-picture-srcset": "github:LucasGIRARD/posthtml-picture-srcset",
     "sass": "^1.77.8",
     "watchy": "^0.10.2"
   }

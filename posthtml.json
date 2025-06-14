@@ -1,0 +1,43 @@
+{
+  "root": "www",
+  "input": "index.html",
+  "output": "www/output.html",
+  "COMMENTEDskip": ["skip.html", "file.html"],
+  "options": {
+    "sync": true,
+    "directives": [{"name": "?php", "start": "<", "end": ">"}]
+  },
+  "plugins": {
+    "posthtml-picture-srcset": {
+      "cwd": "www",
+      "cwd__comment":"current working directory",
+      "imgDir": "./www/images",
+      "imgDir__comment": "not used, todo repair",
+      "format": ".jpg",
+      "imageOptions": {
+        "size": [100, 200, 400, 800],
+        "generate": true,
+        "hook": "renderStart",
+        "hook__comment": "rollup hook",
+        "quality": 70,
+        "quality__comment": "image quality",
+        "dir": "www/images",
+        "dir__comment": "directory string or strings",
+        "src": null,
+        "src__comment": "dirctory string or strings, not used",
+        "inputFormat": ["jpg", "jpeg", "png"],
+        "inputFormat__comment": "image input formats",
+        "outputFormat": ["webp","avif"],
+        "outputFormat__comment": "image output formats",
+        "forceUpscale": false,
+        "forceUpscale__comment": "whether we should forcibly upscale",
+        "skipExisting": true,
+        "skipExisting__comment": "whether we should skip existing images that have already been resized",
+        "maxParallel": 4,
+        "maxParallel__comment": "the max number of parallel images that can be processed concurrently",
+        "outputManifest": null,
+        "outputManifest__comment": "The path to output a manifest of all generated images"
+      }
+    }
+  }
+}
