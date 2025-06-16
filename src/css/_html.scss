@@ -77,3 +77,7 @@ ul {
 li {
 	margin-bottom: 4px;
 }
+
+img:not([src]):not([srcset]) {
+  visibility: hidden;
+}

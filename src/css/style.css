@@ -81,6 +81,10 @@ li {
   margin-bottom: 4px;
 }
 
+img:not([src]):not([srcset]) {
+  visibility: hidden;
+}
+
 .cryptMai:after {
   content: attr(data-name) "@" attr(data-domain) "." attr(data-tld);
 }
@@ -607,7 +611,7 @@ tr[data-progress="100"] > td > div.stars > div {
 
 #presentation img {
   max-width: 250px;
-  max-height: 250px;
+  height: auto;
 }
 
 #presentation > div > div > div {

@@ -1,7 +1,7 @@
 {
   "root": "www",
   "input": "index.html",
-  "output": "www/output.html",
+  "output": "www/index.html",
   "COMMENTEDskip": ["skip.html", "file.html"],
   "options": {
     "sync": true,
@@ -13,7 +13,7 @@
       "cwd__comment":"current working directory",
       "imgDir": "./www/images",
       "imgDir__comment": "not used, todo repair",
-      "format": ".jpg",
+      "format": "native",
       "imageOptions": {
         "size": [100, 200, 400, 800],
         "generate": true,
@@ -27,7 +27,7 @@
         "src__comment": "dirctory string or strings, not used",
         "inputFormat": ["jpg", "jpeg", "png"],
         "inputFormat__comment": "image input formats",
-        "outputFormat": ["webp","avif"],
+        "outputFormat": ["webp","avif", "jpg", "png"],
         "outputFormat__comment": "image output formats",
         "forceUpscale": false,
         "forceUpscale__comment": "whether we should forcibly upscale",

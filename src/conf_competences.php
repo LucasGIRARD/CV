@@ -1,0 +1,85 @@
+<?php
+
+$competences = [
+    [
+        'icon' => '&lt;/&gt;',
+        'title' => 'Languages<br>de Programmation',
+        'rows' => [
+            ['label' => '(x)HTML', 'progress' => 90],
+            ['label' => 'CSS 1-3+', 'progress' => 90],
+            ['label' => 'PHP 4.4-8', 'progress' => 80],
+            ['label' => 'SQL', 'progress' => 70],
+            ['label' => 'ES5-12 (Javascript)', 'progress' => 70],
+            ['label' => 'PowerShell', 'progress' => 40],
+            ['label' => 'Bash', 'progress' => 40],
+            ['label' => 'Batch', 'progress' => 40],
+            ['label' => 'Node.JS', 'progress' => 40],
+            ['label' => 'Python', 'progress' => 40],
+            ['label' => 'Filemaker 6-19', 'progress' => 90],
+            ['label' => 'VB.net', 'progress' => 50],
+            ['label' => 'VB 6 (excel, word)', 'progress' => 40],
+            ['label' => 'C#', 'progress' => 30],
+            ['label' => 'C++', 'progress' => 20],
+            ['label' => 'C', 'progress' => 20],
+            ['label' => 'Java', 'progress' => 10],
+            ['label' => 'Basic', 'progress' => 30],
+        ],
+    ],
+    [
+        'icon' => '🛠️',
+        'title' => 'Compétences liées<br>au développement',
+        'rows' => [
+            ['label' => 'Framework PHP<br><span>Laravel, CodeIgniter, Symfony</span>', 'progress' => 70],
+            ['label' => 'Framework JS<br><span>Angular, AngularJs, Ember.js, Ext.js</span>', 'progress' => 70],
+            ['label' => 'CMS<br><span>Wordpress, Drupal, Joomla</span>', 'progress' => 90],
+            ['label' => 'Debugger<br><span>Xdebug, Sencha app inspector, Firebug...</span>', 'progress' => 90],
+            ['label' => 'Optimisation de pages<br><span>&nbsp;</span>', 'progress' => 80],
+            ['label' => 'Librairie JS<br><span>Jquery, Twitter Bootstrap,...</span>', 'progress' => 90],
+            ['label' => 'Conception MVC<br><span>&nbsp;</span>', 'progress' => 90],
+            ['label' => 'Méthode Merise<br><span>&nbsp;</span>', 'progress' => 90],
+            ['label' => 'Normes W3C<br><span>&nbsp;</span>', 'progress' => 90],
+            ['label' => 'Outil d\'extraction de CSS<br><span>Figma, Adobe XD, InVision</span>', 'progress' => 90],
+            ['label' => 'Outil de graphisme<br><span>Krita, Lunacy, Adobe Photoshop</span>', 'progress' => 70],
+        ],
+    ],
+    [
+        'icon' => '⚙️',
+        'title' => 'Compétences technique',
+        'rows' => [
+            ['label' => 'Installation et configuration serveur<br><span>Apache, PHP, MYSQL, Docker, K8s(WIP)</span>', 'progress' => 70],
+            ['label' => 'Utilisation d\'OS<br><span>Windows 95-8-XP-7-8.1-10, Debian, MacOS X 10.6-12, Gentoo, UBCD, DSL</span>', 'progress' => 80],
+            ['label' => 'Connaissances sur les périphérique réseau<br><span>WAF, pare-feu mitigateur, gateway, routeur, switch, ...</span>', 'progress' => 60],
+            ['label' => 'Connaissances sur les architectures matériels<br><span>processeurs, cartes mères, ...</span>', 'progress' => 80],
+        ],
+    ],
+    [
+        'icon' => '🧰',
+        'title' => 'Logiciels<br>de développement',
+        'rows' => [
+            ['label' => 'visual studio code', 'progress' => 70],
+            ['label' => 'Devilbox', 'progress' => 80],
+            ['label' => 'WNMP', 'progress' => 90],
+            ['label' => 'AMPPS', 'progress' => 90],
+            ['label' => 'sublime text', 'progress' => 80],
+            ['label' => 'MAMP', 'progress' => 90],
+            ['label' => 'UwAmp', 'progress' => 90],
+            ['label' => 'XAMPP', 'progress' => 90],
+            ['label' => 'Xoopserver', 'progress' => 90],
+            ['label' => 'visual studio', 'progress' => 60],
+            ['label' => 'Netbeans', 'progress' => 90],
+            ['label' => 'WAMP', 'progress' => 90],
+            ['label' => 'EasyPHP', 'progress' => 50],
+            ['label' => 'Notepad++', 'progress' => 70],
+        ],
+    ],
+    [
+        'icon' => '💬',
+        'title' => 'Langues',
+        'rows' => [
+            ['label' => 'Anglais', 'progress' => 60],
+            ['label' => 'Anglais - Technique', 'progress' => 90],
+        ],
+    ],
+];
+
+?>
