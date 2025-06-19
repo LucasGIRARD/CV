@@ -1,4 +1,4 @@
-**/node_modules
+/node_modules
 Thumbs.db
 .htpasswd
 www
