@@ -19,49 +19,6 @@
 	color: $white;
 }
 
-.darkBg a {
-	color: $linkDark;
-	transition: 0.7s all;
-}
-
-.darkBg button {
-	color: $linkDark;
-	transition: 0.7s all;
-}
-
-.darkBg a:hover,
-.darkBg a:focus,
-.darkBg a:active,
-.darkBg a.active,
-.darkBg .active a {
-	background-color: initial;
-	color: $linkDark;
-	opacity: 1;
-	text-decoration: underline;
-}
-
-.darkBg button.pure-button:hover,
-.darkBg button.mixitup-control-active {
-	border-color: $mixButtonHover;
-	background-color: unset;
-}
-
-a.pure-button,
-button.pure-button {
-	background-color: transparent;
-	border: 1px solid $border;
-}
-
-a.pure-button:hover,
-button.pure-button:hover {
-	background-color: $linkHoverBg;
-}
-
-.darkBg p {
-	color: $textDark;
-}
-
-
 .left {
 	text-align: left;
 }

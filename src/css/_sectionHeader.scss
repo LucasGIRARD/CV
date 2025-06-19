@@ -3,7 +3,12 @@
 	margin-left: 20px;
 	font-family: 'Ephesis', 'Brush Script MT', 'Courier New', Verdana;
 	text-decoration: dashed;
-	font-size: 30px;
+	font-size: 0px;
+}
+
+#logo img {
+	width: 44px;
+	background-color: $menuLogoBg;
 }
 
 

@@ -15,14 +15,9 @@
 
 .mixSection ul li {
 	margin-top: 10px;
-	background-color: rgba(0, 0, 0, 0.2);
-	backdrop-filter: blur(6px);
-}
-
-.mixSection button {
-	-webkit-text-stroke: 0.5px;
-	padding: 10px 30px;
-	border: $mixButtonBorder;
+	background-color: rgba(0, 0, 0, 0.6);
+	//background-color: rgba(0, 0, 0, 0.2);
+	//backdrop-filter: blur(6px);
 }
 
 .mixWrap {
@@ -51,36 +46,36 @@
 	}
 }
 
-.mix>div.pure-g {
+.mix>div>div.pure-g {
 	height: 100%;
 	align-content: center;
 }
 
-.mix>div:not(.popupContent) {
+.mix>div>div>div:not(.popupContent, .pure-u-1-4, .pure-u-3-4) {
 	margin: 0 4px;
 }
 
-#skills .mix>div:not(.popupContent),
-#xps .mix>div:not(.popupContent),
-#culture .mix>div:not(.popupContent) {
+#skills .mix>div>div:not(.popupContent),
+#xps .mix>div>div:not(.popupContent),
+#culture .mix>div>div:not(.popupContent) {
 	user-select: none;
 	cursor: pointer;
 
 }
 
-.mix>.pure-g>.pure-u-1:nth-child(2),
-.mix>.pure-g>.pure-u-1:nth-child(2),
-.mix>div>.pure-g>div:nth-child(2),
-.mix>.pure-g>.pure-u-1:nth-child(2) {
+.mix>div>.pure-g>.pure-u-1:nth-child(2),
+.mix>div>.pure-g>.pure-u-1:nth-child(2),
+.mix>div>div>.pure-g>div:nth-child(2),
+.mix>div>.pure-g>.pure-u-1:nth-child(2) {
 	margin-bottom: 30px;
 }
 
-.mix>div:not(.popupContent)>div,
-.mix>div:not(.popupContent)>div>div>div {
+.mix>div>div:not(.popupContent)>div,
+.mix>div>div:not(.popupContent)>div>div>div {
 	align-items: center;
 }
 
-.mix>div>div::before {
+.mix>div>div>div::before {
 	content: " ";
 	display: inline-block;
 	height: 100%;
@@ -88,15 +83,15 @@
 	vertical-align: middle;
 }
 
-.mix>div>div>h3,
-.mix>div>div>span,
-.mix>div>div>img {
+.mix>div>div>div>h3,
+.mix>div>div>div>span,
+.mix>div>div>div>img {
 	max-width: calc(100% - 8px);
 	display: inline-block;
 }
 
-.mix>div>h3,
-.mix>div>img {
+.mix>div>div>h3,
+.mix>div>div>img {
 	margin: auto;
 }
 
@@ -106,7 +101,7 @@
 }
 
 .mix img {
-	margin: 4px 0;
+	margin: 4px auto;
 }
 
 .mix span+div img {
@@ -118,11 +113,11 @@
 	display: inline-block;
 }
 
-.mix>* {
+.mix>div>div {
 	font-size: initial;
 }
 
-.mix>span {
+.mix>div>span {
 	font-size: 14px;
 	padding: 4px;
 	border: 1px solid $mixSpanBorder;

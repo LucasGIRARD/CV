@@ -19,7 +19,7 @@ ob_start();
 <head>
     <title>C.V. de Lucas Girard - Développeur Web - Chef de projets</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="description" content="C.V. de Lucas Girard - analyste-développeur - chef de projet">
     <meta name="keywords" content="CV, Lucas Girard, analyste-développeur, chef de projets">
     <meta name="author" content="Lucas Girard">
@@ -47,7 +47,7 @@ ob_start();
     <header class="darkBg">
         <div class="pure-g">
             <div class="pure-u-1 pure-u-xxl-1-6">
-                <a href="/" id="logo" class="inline middle">L G</a>
+                <a href="/" id="logo" class="inline middle"><img src="images/logo/logo.svg" alt="logo"></a>
                 <button id="menuLink" title="Menu mobile"
                     class="pure-button menuLink pure-hidden-xxl"><span></span></button>
             </div>
@@ -221,7 +221,7 @@ ob_start();
 
         </ul>
         <ul class="inlineUl darkBg">
-            <li><button data-filter="all" class="pure-button active">ALL</button></li>
+            <li><button data-filter="all" class="pure-button">ALL</button></li>
             <li>|</li>
             <li><button data-filter=".contrat" class="pure-button">Contrat</button></li>
             <li><button data-filter=".mission" class="pure-button">Mission</button></li>
@@ -234,36 +234,38 @@ ob_start();
         <div class="pure-g wrapWidth mixWrap">
             <?php foreach ($experiences as $exp): ?>
                 <div class="pure-u-1 pure-u-md-1-2 pure-u-xl-1-3 pure-u-xxl-1-4 mix <?= htmlspecialchars($exp['classes']) ?>">
-                    <span class="date"><?= htmlspecialchars($exp['date']) ?></span>
-                    <span class="poste"><?= htmlspecialchars($exp['poste']) ?></span>
-                    <span class="type"><?= htmlspecialchars($exp['type']) ?></span>
-                    <?= count($exp['images']) > 0 ? '<div>' : '' ?>
-                    <div class="pure-g">
-                        <div class="pure-u-1">
-                            <?php if (count($exp['images']) === 1): ?>
-                                <img src="<?= htmlspecialchars($exp['images'][0]['src']) ?>" alt="<?= htmlspecialchars($exp['images'][0]['alt']) ?>" class="<?= htmlspecialchars($exp['images'][0]['class']) ?>">
-                            <?php else: ?>
-                                <div class="pure-g">
-                                    <?php foreach ($exp['images'] as $img): ?>
-                                        <div class="pure-u-1-<?= $img['u'] ?><?= isset($img['right']) && $img['right'] ? ' right' : '' ?>">
-                                            <img src="<?= htmlspecialchars($img['src']) ?>" alt="<?= htmlspecialchars($img['alt']) ?>" class="<?= htmlspecialchars($img['class']) ?>">
-                                        </div>
-                                    <?php endforeach; ?>
-                                </div>
-                            <?php endif; ?>
+                    <div>
+                        <span class="date"><?= htmlspecialchars($exp['date']) ?></span>
+                        <span class="poste"><?= htmlspecialchars($exp['poste']) ?></span>
+                        <span class="type"><?= htmlspecialchars($exp['type']) ?></span>
+                        <?= count($exp['images']) > 0 ? '<div>' : '' ?>
+                        <div class="pure-g">
+                            <div class="pure-u-1">
+                                <?php if (count($exp['images']) === 1): ?>
+                                    <img src="<?= htmlspecialchars($exp['images'][0]['src']) ?>" alt="<?= htmlspecialchars($exp['images'][0]['alt']) ?>" class="<?= htmlspecialchars($exp['images'][0]['class']) ?>">
+                                <?php else: ?>
+                                    <div class="pure-g">
+                                        <?php foreach ($exp['images'] as $img): ?>
+                                            <div class="pure-u-1-<?= $img['u'] ?><?= isset($img['right']) && $img['right'] ? ' right' : '' ?>">
+                                                <img src="<?= htmlspecialchars($img['src']) ?>" alt="<?= htmlspecialchars($img['alt']) ?>" class="<?= htmlspecialchars($img['class']) ?>">
+                                            </div>
+                                        <?php endforeach; ?>
+                                    </div>
+                                <?php endif; ?>
+                            </div>
+                            <div class="pure-u-1">
+                                <h3><?= htmlspecialchars($exp['company']) ?></h3>
+                            </div>
                         </div>
-                        <div class="pure-u-1">
-                            <h3><?= htmlspecialchars($exp['company']) ?></h3>
+                        <?= count($exp['images']) > 0 ? '</div>' : '' ?>
+                        <div class="popupContent">
+                            <?= htmlspecialchars($exp['period']) ?>
+                            <ul class='left'>
+                                <?php foreach ($exp['details'] as $detail): ?>
+                                    <li><?= htmlspecialchars($detail) ?></li>
+                                <?php endforeach; ?>
+                            </ul>
                         </div>
-                    </div>
-                    <?= count($exp['images']) > 0 ? '</div>' : '' ?>
-                    <div class="popupContent">
-                        <?= htmlspecialchars($exp['period']) ?>
-                        <ul class='left'>
-                            <?php foreach ($exp['details'] as $detail): ?>
-                                <li><?= htmlspecialchars($detail) ?></li>
-                            <?php endforeach; ?>
-                        </ul>
                     </div>
                 </div>
             <?php endforeach; ?>
@@ -276,14 +278,16 @@ ob_start();
         <div class="pure-g wrapWidth mixWrap">
             <?php foreach ($formations as $formation): ?>
                 <div class="pure-u-1 pure-u-md-1-2 pure-u-xl-1-3 pure-u-xxl-1-4 pure-u-xxxl-1-6 mix">
-                    <span class="date"><?= htmlspecialchars($formation['date']) ?></span>
-                    <span class="where"><?= htmlspecialchars($formation['where']) ?></span>
-                    <div class="pure-g">
-                        <div class="pure-u-1-4">
-                            <img src="<?= htmlspecialchars($formation['img']['src']) ?>" alt="<?= htmlspecialchars($formation['img']['alt']) ?>" class="<?= htmlspecialchars($formation['img']['class']) ?>">
-                        </div>
-                        <div class="pure-u-3-4">
-                            <h3><?= htmlspecialchars($formation['title']) ?></h3>
+                    <div>
+                        <span class="date"><?= htmlspecialchars($formation['date']) ?></span>
+                        <span class="where"><?= htmlspecialchars($formation['where']) ?></span>
+                        <div class="pure-g">
+                            <div class="pure-u-1">
+                                <img src="<?= htmlspecialchars($formation['img']['src']) ?>" alt="<?= htmlspecialchars($formation['img']['alt']) ?>" class="<?= htmlspecialchars($formation['img']['class']) ?>">
+                            </div>
+                            <div class="pure-u-1">
+                                <h3><?= htmlspecialchars($formation['title']) ?></h3>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -296,12 +300,19 @@ ob_start();
         <div class="pure-g wrapWidth mixWrap">
             <?php foreach ($projects as $project): ?>
                 <div class="pure-u-1 pure-u-md-1-2 pure-u-xl-1-3 pure-u-xxl-1-4 pure-u-xxxl-1-6 mix" <?= isset($project['data_text']) ? ' data-text="' . htmlspecialchars($project['data_text']) . '"' : '' ?>>
-                    <span class="date"><?= htmlspecialchars($project['date']) ?></span>
-                    <span class="version"><?= htmlspecialchars($project['version']) ?></span>
-                    <h3><?= $project['title'] ?></h3>
-                    <?php if (isset($project['download'])): ?>
-                        <a class="pure-button" href="<?= htmlspecialchars($project['download']) ?>">Télécharger</a>
-                    <?php endif; ?>
+                    <div>
+                        <span class="date"><?= htmlspecialchars($project['date']) ?></span>
+                        <span class="version"><?= htmlspecialchars($project['version']) ?></span>
+                        <div>
+                        <h3><?= $project['title'] ?></h3>
+                        <?php if (isset($project['download'])): ?>
+                            <a class="pure-button" href="<?= htmlspecialchars($project['download']) ?>">Télécharger</a>
+                        <?php endif; ?>
+                        <?php if (isset($project['git'])): ?>
+                            <a class="button pure-button" href="<?= htmlspecialchars($project['git']) ?>">Git</a>
+                        <?php endif; ?>
+                        </div>
+                    </div>
                 </div>
             <?php endforeach; ?>
         </div>
@@ -310,7 +321,7 @@ ob_start();
     <section id="culture" class="mixSection">
         <h2 class="darkBg">CULTURE</h2>
         <ul class="inlineUl darkBg">
-            <li><button data-filter="all" class="pure-button active">ALL</button></li>
+            <li><button data-filter="all" class="pure-button">ALL</button></li>
             <li><button data-filter=".book" class="pure-button">LIVRES</button></li>
             <!-- <li><button data-filter=".sites" class="pure-button">SITES</button></li> -->
             <li><button data-filter=".rss" class="pure-button">RSS</button></li>
@@ -323,52 +334,58 @@ ob_start();
 
             <?php foreach ($books as $book): ?>
                 <div class="pure-u-1 pure-u-md-1-2 pure-u-xl-1-3 pure-u-xxl-1-4 pure-u-xxxl-1-6 mix book">
-                    <span class="<?= $book['span_class'] ?>">lu</span>
-                    <div class="pure-g">
-                        <div class="pure-u-1-4">
-                            <img class="pure-img" src="<?= $book['img'] ?>" alt="photo of the book">
-                        </div>
-                        <div class="pure-u-3-4">
-                            <h3><?= $book['title'] ?><br><?= $book['subtitle'] ?></h3>
+                    <div>
+                        <span class="<?= $book['span_class'] ?>">lu</span>
+                        <div class="pure-g">
+                            <div class="pure-u-1-4">
+                                <img class="pure-img" src="<?= $book['img'] ?>" alt="photo of the book">
+                            </div>
+                            <div class="pure-u-3-4">
+                                <h3><?= $book['title'] ?><br><?= $book['subtitle'] ?></h3>
+                            </div>
                         </div>
                     </div>
                 </div>
             <?php endforeach; ?>
             <?php foreach ($rssFeeds as $feed): ?>
                 <div class="pure-u-1 pure-u-md-1-2 pure-u-xl-1-3 pure-u-xxl-1-4 pure-u-xxxl-1-6 mix rss <?= htmlspecialchars($feed['class']) ?>">
-                    <div class="pure-g">
-                        <div class="pure-u-1-4">
-                            <img class="pure-img" src="<?= htmlspecialchars($feed['img']) ?>" alt="<?= htmlspecialchars($feed['img_alt']) ?>">
+                    <div>
+                        <div class="pure-g">
+                            <div class="pure-u-1-4">
+                                <img class="pure-img" src="<?= htmlspecialchars($feed['img']) ?>" alt="<?= htmlspecialchars($feed['img_alt']) ?>">
+                            </div>
+                            <div class="pure-u-3-4">
+                                <h3><?= htmlspecialchars($feed['title']) ?></h3>
+                            </div>
                         </div>
-                        <div class="pure-u-3-4">
-                            <h3><?= htmlspecialchars($feed['title']) ?></h3>
+                        <div class="popupContent">
+                            <ul class='left'>
+                                <?php foreach ($feed['links'] as $link): ?>
+                                    <li><?= htmlspecialchars($link['label']) ?> : <a rel="nofollow" href="<?= htmlspecialchars($link['href']) ?>"><?= htmlspecialchars($link['text']) ?></a></li>
+                                <?php endforeach; ?>
+                            </ul>
                         </div>
-                    </div>
-                    <div class="popupContent">
-                        <ul class='left'>
-                            <?php foreach ($feed['links'] as $link): ?>
-                                <li><?= htmlspecialchars($link['label']) ?> : <a rel="nofollow" href="<?= htmlspecialchars($link['href']) ?>"><?= htmlspecialchars($link['text']) ?></a></li>
-                            <?php endforeach; ?>
-                        </ul>
                     </div>
                 </div>
             <?php endforeach; ?>
             <?php foreach ($ytChannels as $yt): ?>
                 <div class="pure-u-1 pure-u-md-1-2 pure-u-xl-1-3 pure-u-xxl-1-4 pure-u-xxxl-1-6 mix yt">
-                    <span class="date"><?= htmlspecialchars($yt['date']) ?></span>
-                    <span class="nbrVideos"><?= htmlspecialchars($yt['nbrVideos']) ?></span>
-                    <div class="pure-g">
-                        <div class="pure-u-1-4">
-                            <img class="pure-img" src="<?= htmlspecialchars($yt['img']) ?>" alt="<?= htmlspecialchars($yt['img_alt']) ?>">
+                    <div>
+                        <span class="date"><?= htmlspecialchars($yt['date']) ?></span>
+                        <span class="nbrVideos"><?= htmlspecialchars($yt['nbrVideos']) ?></span>
+                        <div class="pure-g">
+                            <div class="pure-u-1-4">
+                                <img class="pure-img" src="<?= htmlspecialchars($yt['img']) ?>" alt="<?= htmlspecialchars($yt['img_alt']) ?>">
+                            </div>
+                            <div class="pure-u-3-4">
+                                <h3><?= htmlspecialchars($yt['title']) ?></h3>
+                            </div>
                         </div>
-                        <div class="pure-u-3-4">
-                            <h3><?= htmlspecialchars($yt['title']) ?></h3>
+                        <div class="popupContent">
+                            <ul class='left'>
+                                <li>url : <a rel="nofollow" href="<?= htmlspecialchars($yt['url']) ?>"><?= htmlspecialchars($yt['url']) ?></a></li>
+                            </ul>
                         </div>
-                    </div>
-                    <div class="popupContent">
-                        <ul class='left'>
-                            <li>url : <a rel="nofollow" href="<?= htmlspecialchars($yt['url']) ?>"><?= htmlspecialchars($yt['url']) ?></a></li>
-                        </ul>
                     </div>
                 </div>
             <?php endforeach; ?>
@@ -386,9 +403,9 @@ ob_start();
                         <fieldset class="pure-group">
                             <div>
                                 <input type="text" id="name" name="name" class="pure-input-1" placeholder="Nom"
-                                    required="">
+                                    required="" autocomplete="on">
                                 <input type="email" id="email" name="email" class="pure-input-1"
-                                    placeholder="Adresse E-mail" required="">
+                                    placeholder="Adresse E-mail" required="" autocomplete="on">
                             </div>
                         </fieldset>
                     </div>
@@ -397,7 +414,7 @@ ob_start();
                         <fieldset class="pure-group">
                             <div>
                                 <input type="text" id="company" name="company" class="pure-input-1"
-                                    placeholder="Entreprise">
+                                    placeholder="Entreprise" autocomplete="on">
                                 <input type="text" id="website" name="website" class="pure-input-1"
                                     placeholder="Site internet">
                             </div>
@@ -501,8 +518,8 @@ ob_start();
                                 data-domain="lucas-girard" data-tld="fr"
                                 onclick="window.location.href = 'mailto:' + this.dataset.name + '@' + this.dataset.domain + '.' + this.dataset.tld; return false;"><i
                                     class="icon-email"></i> </a></li>
-                        <li class="pure-menu-item"><i class="icon-home"></i> 32 rue Paul Vaillant Couturier, 94700
-                            Maisons-Alfort, FRANCE</li>
+                        <li class="pure-menu-item"><p><i class="icon-home"></i> 32 rue Paul Vaillant Couturier, 94700
+                            Maisons-Alfort, FRANCE</p></li>
                     </ul>
                 </nav>
 

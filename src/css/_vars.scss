@@ -49,7 +49,8 @@ $footerBg: '../images/contact/background.png';
 $toTopBg: '../images/move-top.png';
 
 $h2: $whiteLight;
-$border: $whiteLight;
+$borderDark: $whiteLight;
+$border: $grey;
 $input: $blackBrown;
 $linkDark: $white;
 $mixButtonHover: $whiteLight;
@@ -64,7 +65,8 @@ $inputInvalid: $red;
 $mixSpanBorder: $grey;
 
 $headerBorder: 1px solid $blackBrown;
-$mixButtonBorder: 2px solid $grey;
+$ButtonBorder: 2px solid $grey;
+$ButtonBorderDark: 2px solid $greyLight;
 $topGridsBorder: 1px solid $greyLight;
 
 $textShadow: 0.2px 0px 0.1px $greyLight;

@@ -59,6 +59,61 @@ a {
 	opacity: 0.8;
 }
 
+.darkBg a {
+	color: $linkDark;
+	transition: 0.7s all;
+}
+
+.darkBg a:hover,
+.darkBg a:focus,
+.darkBg a:active,
+.darkBg a.active,
+.darkBg .active a {
+	background-color: initial;
+	color: $linkDark;
+	opacity: 1;
+	text-decoration: underline;
+}
+
+.darkBg button {
+	color: $linkDark;
+	transition: 0.7s all;
+}
+
+.darkBg button.pure-button:hover,
+.darkBg button.mixitup-control-active {
+	border-color: $mixButtonHover;
+	background-color: unset;
+}
+
+button, a.button {
+	-webkit-text-stroke: 0.5px;
+	padding: 10px 30px;
+	border: $ButtonBorderDark;
+}
+
+a.pure-button,
+button.pure-button {
+	background-color: transparent;
+	border: 1px solid $border;
+}
+
+.darkBg a.pure-button,
+.darkBg button.pure-button {
+	border-color: $borderDark;
+}
+
+a.pure-button:hover,
+button.pure-button:hover {
+	background-color: $linkHoverBg;
+}
+
+.darkBg button, .darkBg a.button {
+	-webkit-text-stroke: 0.5px;
+	padding: 10px 30px;
+	border: $ButtonBorder;
+}
+
 p {
 	color: $text;
 	line-height: 24px;
@@ -67,6 +122,9 @@ p {
 	text-shadow: $textShadow;
 }
 
+.darkBg p {
+	color: $textDark;
+}
 
 ul {
 	color: $text;
@@ -81,3 +139,8 @@ li {
 img:not([src]):not([srcset]) {
   visibility: hidden;
 }
+
+
+
+
+

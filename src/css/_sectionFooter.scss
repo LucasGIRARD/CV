@@ -3,6 +3,11 @@ footer li {
 	line-height: 24px;
 }
 
+footer .pure-menu-link {
+	display: inline-block;
+	background-color: rgba(0, 0, 0, 1.6);
+}
+
 footer form.pure-form input[type=text],
 footer form.pure-form input[type=email],
 footer form.pure-form textarea {
