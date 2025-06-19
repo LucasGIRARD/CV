@@ -1,7 +1,7 @@
 {
-  "root": "www",
+  "root": "src",
   "input": "index.html",
-  "output": "www/index.html",
+  "output": "src/indexProd.html",
   "COMMENTEDskip": ["skip.html", "file.html"],
   "options": {
     "sync": true,
@@ -9,9 +9,9 @@
   },
   "plugins": {
     "posthtml-picture-srcset": {
-      "cwd": "www",
+      "cwd": "src",
       "cwd__comment":"current working directory",
-      "imgDir": "./www/images",
+      "imgDir": "src/images",
       "imgDir__comment": "not used, todo repair",
       "format": "native",
       "imageOptions": {
@@ -21,7 +21,7 @@
         "hook__comment": "rollup hook",
         "quality": 70,
         "quality__comment": "image quality",
-        "dir": "www/images",
+        "dir": "src/images",
         "dir__comment": "directory string or strings",
         "src": null,
         "src__comment": "dirctory string or strings, not used",

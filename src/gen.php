@@ -306,10 +306,10 @@ ob_start();
                         <div>
                         <h3><?= $project['title'] ?></h3>
                         <?php if (isset($project['download'])): ?>
-                            <a class="pure-button" href="<?= htmlspecialchars($project['download']) ?>">Télécharger</a>
+                            <a class="pure-button" target="_blank" rel="nofollow" href="<?= htmlspecialchars($project['download']) ?>">Télécharger</a>
                         <?php endif; ?>
                         <?php if (isset($project['git'])): ?>
-                            <a class="button pure-button" href="<?= htmlspecialchars($project['git']) ?>">Git</a>
+                            <a class="button pure-button" target="_blank" rel="nofollow" href="<?= htmlspecialchars($project['git']) ?>">Git</a>
                         <?php endif; ?>
                         </div>
                     </div>

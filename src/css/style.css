@@ -679,6 +679,13 @@ tr[data-progress="100"] > td > div.stars > div {
   scrollbar-color: #fff6e5 #1e1912;
 }
 
+.mixWrap {
+  backdrop-filter: blur(6px);
+  max-height: 70vh;
+  overflow-y: scroll;
+  scrollbar-color: #fff6e5 #1e1912;
+}
+
 .mix {
   position: relative;
   overflow: hidden;
@@ -697,6 +704,20 @@ tr[data-progress="100"] > td > div.stars > div {
     padding-bottom: 36px !important;
   }
 }
+.mix > div {
+  margin: 0;
+  padding-bottom: 8px;
+}
+
+.mix > div.pure-g {
+  height: 100%;
+  align-content: center;
+}
+
+.mix > div:not(.popupContent) {
+  margin: 0 4px;
+}
+
 .mix > div > div.pure-g {
   height: 100%;
   align-content: center;
@@ -740,14 +761,13 @@ tr[data-progress="100"] > td > div.stars > div {
   display: inline-block;
 }
 
-.mix > div > div > h3,
 .mix > div > div > img {
   margin: auto;
 }
 
 .mix h3 {
   color: #5F5F5F;
-  margin: 12px 0;
+  margin: 12px auto;
 }
 
 .mix img {

@@ -53,6 +53,11 @@
 	}
 }
 
+.mix>div {
+	margin: 0;
+	padding-bottom: 8px;
+}
+
 .mix>div.pure-g {
 	height: 100%;
 	align-content: center;
@@ -106,14 +111,13 @@
 	display: inline-block;
 }
 
-.mix>div>div>h3,
 .mix>div>div>img {
 	margin: auto;
 }
 
 .mix h3 {
 	color: $text;
-	margin: 12px 0;
+	margin: 12px auto;
 }
 
 .mix img {
