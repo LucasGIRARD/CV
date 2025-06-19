@@ -24,6 +24,8 @@
     "preopti:critical": "mv www/index.html www/index.nmin.html",
     "opti:critical": "critical www/index.nmin.html --base www --inline > www/index.html",
     "htaccess": "mv www/.htaccess2 www/.htaccess",
+    "preindex": "rm www/index.html",
+    "index": "mv www/indexProd.html www/index.html",
     "getImageList": "find src -type f \\( -name \"*.jpg\" -o -name \"*.jpeg\" -o -name \"*.png\" -o -name \"*.gif\" -o -name \"*.bmp\" \\) | sed 's#src/images/##' > image_files.txt",
     "bimgc": "bimgc",
     "htmlImg": "posthtml -c posthtml.json",
@@ -31,7 +33,7 @@
     "debug:powershell:cmd2": "Stop-Process -Id ***",
     "dev": "concurrently --kill-others \"npm run watchy:sass\" \"npm run livereload\"",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm run moveBuild && npm run prefixCss && npm run ugli && npm run htaccess"
+    "build": "npm run moveBuild && npm run prefixCss && npm run index && npm run ugli && npm run htaccess"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.21",
