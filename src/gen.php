@@ -27,11 +27,11 @@ ob_start();
     <meta name="googlebot" content="index, follow">
     <meta name="google" content="notranslate">
     <meta name="theme-color" content="#ffffff">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="icon" href="images/logo/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/logo/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/logo/apple-touch-icon.png">
     <?php foreach ($appleIconSizes as $size): ?>
-        <link rel="apple-touch-icon" sizes="<?= htmlspecialchars($size) ?>" href="images/apple-touch-icon-<?= htmlspecialchars($size) ?>.png">
+        <link rel="apple-touch-icon" sizes="<?= htmlspecialchars($size) ?>" href="images/logo/apple-touch-icon-<?= htmlspecialchars($size) ?>.png">
     <?php endforeach; ?>
 
     <link rel="stylesheet" href="vendors/node_modules/purecss/pure-min.css">
