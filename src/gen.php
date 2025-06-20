@@ -20,7 +20,7 @@ ob_start();
     <title>C.V. de Lucas Girard - Développeur Web - Chef de projets</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="description" content="C.V. de Lucas Girard - chef de projet">
+    <meta name="description" content="C.V. de Lucas Girard - Développeur Web - chef de projet">
     <meta name="keywords" content="CV, Lucas Girard, analyste-développeur, chef de projets">
     <meta name="author" content="Lucas Girard">
     <meta name="robots" content="index, follow">
