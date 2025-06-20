@@ -32,7 +32,7 @@ $books = [
         'span_class' => 'nlu',
     ],
     [
-        'img' => 'images/culture/smashing/smashingmag-print-social-magazine-large.avif',
+        'img' => 'images/culture/smashing/smashingmag-print-social-magazine-large.png',
         'title' => 'Smashing Magazine',
         'subtitle' => 'Smashing Print #1: Ethics & Privacy',
         'span_class' => 'lu',

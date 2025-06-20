@@ -4,18 +4,18 @@
   "output": "src/indexProd.html",
   "COMMENTEDskip": ["skip.html", "file.html"],
   "options": {
-    "sync": true,
+    "sync": false,
     "directives": [{"name": "?php", "start": "<", "end": ">"}]
   },
   "plugins": {
     "posthtml-picture-srcset": {
       "cwd": "src",
       "cwd__comment":"current working directory",
-      "imgDir": "src/images",
+      "imgDir": "./src/images",
       "imgDir__comment": "not used, todo repair",
       "format": "native",
       "imageOptions": {
-        "size": [100, 200, 400, 800],
+        "size": [100, 400],
         "generate": true,
         "hook": "renderStart",
         "hook__comment": "rollup hook",
@@ -25,7 +25,7 @@
         "dir__comment": "directory string or strings",
         "src": null,
         "src__comment": "dirctory string or strings, not used",
-        "inputFormat": ["jpg", "jpeg", "png"],
+        "inputFormat": ["jpg", "jpeg", "png", "gif", "bmp"],
         "inputFormat__comment": "image input formats",
         "outputFormat": ["webp","avif", "jpg", "png"],
         "outputFormat__comment": "image output formats",
