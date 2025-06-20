@@ -2,6 +2,18 @@
 
 $books = [
     [
+        'img' => 'images/culture/oreilly/learning_agile.oreilly.jpg',
+        'title' => 'oreilly',
+        'subtitle' => 'Learning Agile',
+        'span_class' => 'nlu',
+    ],
+    [
+        'img' => 'images/culture/oreilly/scrum_novice_to_ninja.oreilly.jpg',
+        'title' => 'oreilly',
+        'subtitle' => 'Scrum: Novice to Ninja',
+        'span_class' => 'nlu',
+    ],
+    [
         'img' => 'images/culture/smashing/interface-checklists-cards-ux.png',
         'title' => 'Smashing Magazine',
         'subtitle' => 'Smart Interface Design Patterns Checklists',
