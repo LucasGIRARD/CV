@@ -746,14 +746,6 @@ tr[data-progress="100"] > td > div.stars > div {
   align-items: center;
 }
 
-.mix > div > div > div::before {
-  content: " ";
-  display: inline-block;
-  height: 100%;
-  width: 1px;
-  vertical-align: middle;
-}
-
 .mix > div > div > div > h3,
 .mix > div > div > div > span,
 .mix > div > div > div > img {
