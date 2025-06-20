@@ -31,7 +31,7 @@ section {
 }
 
 footer {
-  background-image: url("../images/contact/background.png");
+  background-image: url("../images/contact/background.jpg");
   background-position: center;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.8);
@@ -802,7 +802,7 @@ tr[data-progress="100"] > td > div.stars > div {
 }
 
 #skills {
-  background-image: url("../images/skills/background.png");
+  background-image: url("../images/skills/background.jpg");
 }
 
 .mix .poste {
@@ -814,19 +814,19 @@ tr[data-progress="100"] > td > div.stars > div {
 }
 
 #xps {
-  background-image: url("../images/xps/background.png");
+  background-image: url("../images/xps/background.jpg");
 }
 
 #formations {
-  background-image: url("../images/formations/background.png");
+  background-image: url("../images/formations/background.jpg");
 }
 
 #projects {
-  background-image: url("../images/projects/background.png");
+  background-image: url("../images/projects/background.jpg");
 }
 
 #culture {
-  background-image: url("../images/culture/logo-youtube-rss-www-book.png");
+  background-image: url("../images/culture/logo-youtube-rss-www-book.jpg");
   background-size: 200px;
   background-repeat: repeat;
 }
