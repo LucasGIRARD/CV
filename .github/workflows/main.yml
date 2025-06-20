@@ -47,4 +47,4 @@ jobs:
         shell: python
         run: |
           import urllib.request
-          urllib.request.urlopen("https://lucas-girard.fr/copyUpload.php")
+          urllib.request.urlopen("https://lucas-girard.fr/copyUpload.php?token=${{ secrets.copy_token }}")
