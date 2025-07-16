@@ -480,25 +480,15 @@ ob_start();
                                     <a href="#contact" class="pure-menu-link">Télécharger CV</a>
                                     <ul class="pure-menu-children">
                                         <li class="pure-menu-item">
-                                            <a class="pure-menu-link pure-button" href="files/cv/CV-Lucas-GIRARD.pdf">
-                                                <i class="icon-download"></i>PDF
+                                            <a class="pure-menu-link pure-button" href="files/cv/CV2c-Lucas-GIRARD.pdf">
+                                                <i class="icon-download"></i>CV
                                             </a>
                                         </li>
                                         <li class="pure-menu-item">
-                                            <a class="pure-menu-link pure-button" href="files/cv/CV-Lucas-GIRARD.docx">
-                                                <i class="icon-download"></i>Docx (Word)
+                                            <a class="pure-menu-link pure-button" href="files/cv/CV1b-Lucas-GIRARD.pdf">
+                                                <i class="icon-download"></i>CV thème ultra light
                                             </a>
-                                        </li>
-                                        <li class="pure-menu-item">
-                                            <a class="pure-menu-link pure-button" href="files/cv/CV-Lucas-GIRARD.doc">
-                                                <i class="icon-download"></i>doc (Word 97-2003)
-                                            </a>
-                                        </li>
-                                        <li class="pure-menu-item">
-                                            <a class="pure-menu-link pure-button" href="files/cv/CV-Lucas-GIRARD.odt">
-                                                <i class="icon-download"></i>odt (OpenDocument)
-                                            </a>
-                                        </li>
+                                        </li>                                        
                                     </ul>
                                 </li>
                             </ul>
