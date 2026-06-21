@@ -462,7 +462,6 @@ tr[data-progress="100"] > td > div.stars > div {
 
 #logo img {
   width: 44px;
-  background-color: #ffffff;
 }
 
 #menu {
@@ -471,6 +470,7 @@ tr[data-progress="100"] > td > div.stars > div {
   z-index: 1000;
   position: relative;
   transition: all 0.7s, height 0.1s 1s;
+  padding: 11px 0px;
 }
 
 .menuOpen #menu {
